@@ -82,7 +82,7 @@ export default function HeroSection() {
               </p>
             </div>
           </div>
-          <p className="text-white/40 text-xs mb-8">※ 楽天従業員紹介限定。このリンク経由での申し込みのみ対象です。</p>
+          <p className="text-white/40 text-xs mb-8">※ 楽天従業員紹介限定（コード：2162）。2回線目・再契約の方も対象。</p>
 
           {/* CTA */}
           <a
