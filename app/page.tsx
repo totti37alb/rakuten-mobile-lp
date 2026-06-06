@@ -1,4 +1,5 @@
 import HeroSection from "@/components/HeroSection";
+import PersonalIntroSection from "@/components/PersonalIntroSection";
 import BenefitsSection from "@/components/BenefitsSection";
 import FAQSection from "@/components/FAQSection";
 import ArticlesSection from "@/components/ArticlesSection";
@@ -14,16 +15,19 @@ export default function Home() {
       {/* ① ヒーロー */}
       <HeroSection />
 
-      {/* ② メリット一覧 */}
+      {/* ② totti自己紹介（信頼の核） */}
+      <PersonalIntroSection />
+
+      {/* ③ メリット一覧 */}
       <BenefitsSection />
 
-      {/* ③ FAQ */}
+      {/* ④ FAQ */}
       <FAQSection />
 
-      {/* ④ 自動更新コンテンツ一覧 */}
+      {/* ⑤ 自動更新コンテンツ一覧 */}
       <ArticlesSection articles={articles} />
 
-      {/* ⑤ 最終CTA */}
+      {/* ⑥ 最終CTA */}
       <CTASection />
 
       {/* フッター */}

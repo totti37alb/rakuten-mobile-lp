@@ -15,25 +15,45 @@ export default function CTASection() {
       />
 
       <div className="relative z-10 max-w-xl mx-auto text-center">
-        <p className="text-rakuten-red text-sm font-bold tracking-widest uppercase mb-4">Apply Now</p>
+        <p className="text-rakuten-red text-sm font-bold tracking-widest uppercase mb-4">楽天従業員紹介 限定特典</p>
         <h2 className="text-3xl md:text-4xl font-black tracking-tight mb-4">
-          紹介リンクから申し込もう
+          これ、普通の紹介リンクより<br />お得です。
         </h2>
-        <p className="text-white/60 text-base mb-10 leading-relaxed">
-          このリンク経由で申し込むだけで、<br />
-          <span className="text-white font-bold">最大7,000ポイント還元</span>を受け取れます。
+        <p className="text-white/60 text-base mb-8 leading-relaxed">
+          楽天従業員から紹介された方限定の特別キャンペーン。<br />
+          通常の紹介より最大1,000P多い特典が受け取れます。
         </p>
 
-        {/* ポイント表示 */}
-        <div className="flex justify-center gap-8 mb-10">
-          <div className="text-center">
-            <p className="text-white/40 text-xs mb-1">あなたが受け取れる</p>
-            <p className="text-4xl font-black">7,000<span className="text-lg">P</span></p>
+        {/* ポイント比較 */}
+        <div className="flex justify-center gap-6 mb-8">
+          <div className="text-center bg-white/5 rounded-xl px-5 py-4 border border-white/10">
+            <p className="text-white/40 text-xs mb-1">MNP乗り換え</p>
+            <p className="text-4xl font-black text-rakuten-red">14,000</p>
+            <p className="text-white/60 text-sm font-bold">ポイント</p>
           </div>
-          <div className="w-px bg-white/20" />
-          <div className="text-center">
-            <p className="text-white/40 text-xs mb-1">紹介した人ももらえる</p>
-            <p className="text-4xl font-black">7,000<span className="text-lg">P</span></p>
+          <div className="text-center bg-white/5 rounded-xl px-5 py-4 border border-white/10">
+            <p className="text-white/40 text-xs mb-1">新規申し込み</p>
+            <p className="text-4xl font-black text-white">11,000</p>
+            <p className="text-white/60 text-sm font-bold">ポイント</p>
+          </div>
+        </div>
+
+        {/* 3条件 */}
+        <div className="bg-white/5 border border-white/10 rounded-2xl p-5 mb-8 text-left">
+          <p className="text-white/50 text-xs font-bold uppercase tracking-wider mb-3 text-center">特典を受け取る3つの条件</p>
+          <div className="space-y-2.5">
+            {[
+              "このリンクから楽天IDでログインして申し込む",
+              "Rakuten最強プランの利用を開始する",
+              "Rakuten Linkアプリで10秒以上電話をかける",
+            ].map((step, i) => (
+              <div key={i} className="flex items-start gap-3">
+                <span className="flex-shrink-0 w-5 h-5 rounded-full bg-rakuten-red text-white text-xs font-black flex items-center justify-center mt-0.5">
+                  {i + 1}
+                </span>
+                <p className="text-white/80 text-sm leading-relaxed">{step}</p>
+              </div>
+            ))}
           </div>
         </div>
 

@@ -64,23 +64,24 @@ export default function HeroSection() {
           </p>
 
           {/* ポイント数字 */}
-          <div className="flex items-center gap-6 mb-10">
+          <div className="flex items-start gap-6 mb-3">
             <div>
-              <p className="text-white/50 text-xs font-medium mb-0.5">紹介された方</p>
+              <p className="text-white/50 text-xs font-medium mb-0.5">MNP乗り換えの方</p>
               <p className="text-3xl font-black text-white">
-                最大 <span className="text-rakuten-red">7,000</span>
+                <span className="text-rakuten-red">14,000</span>
                 <span className="text-lg font-bold"> P</span>
               </p>
             </div>
-            <div className="w-px h-10 bg-white/20" />
+            <div className="w-px h-10 bg-white/20 mt-1" />
             <div>
-              <p className="text-white/50 text-xs font-medium mb-0.5">紹介した方（私）</p>
+              <p className="text-white/50 text-xs font-medium mb-0.5">新規申し込みの方</p>
               <p className="text-3xl font-black text-white">
-                最大 <span className="text-rakuten-red">7,000</span>
+                <span className="text-rakuten-red">11,000</span>
                 <span className="text-lg font-bold"> P</span>
               </p>
             </div>
           </div>
+          <p className="text-white/40 text-xs mb-8">※ 楽天従業員紹介限定。通常の紹介より最大1,000P多い特典です。</p>
 
           {/* CTA */}
           <a
