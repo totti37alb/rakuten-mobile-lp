@@ -1,6 +1,5 @@
-import HeroSection from "@/components/HeroSection";
-import MarqueeTicker from "@/components/MarqueeTicker";
 import CampaignBannerSection from "@/components/CampaignBannerSection";
+import MarqueeTicker from "@/components/MarqueeTicker";
 import PersonalIntroSection from "@/components/PersonalIntroSection";
 import BenefitsSection from "@/components/BenefitsSection";
 import FAQSection from "@/components/FAQSection";
@@ -14,14 +13,11 @@ export default function Home() {
 
   return (
     <main className="min-h-screen">
-      {/* ① ヒーロー */}
-      <HeroSection />
+      {/* ① ファーストビュー：公式バナー */}
+      <CampaignBannerSection />
 
       {/* マーキー */}
       <MarqueeTicker />
-
-      {/* 公式バナー */}
-      <CampaignBannerSection />
 
       {/* ② totti自己紹介（信頼の核） */}
       <PersonalIntroSection />
