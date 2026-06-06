@@ -1,5 +1,6 @@
 import HeroSection from "@/components/HeroSection";
 import MarqueeTicker from "@/components/MarqueeTicker";
+import CampaignBannerSection from "@/components/CampaignBannerSection";
 import PersonalIntroSection from "@/components/PersonalIntroSection";
 import BenefitsSection from "@/components/BenefitsSection";
 import FAQSection from "@/components/FAQSection";
@@ -18,6 +19,9 @@ export default function Home() {
 
       {/* マーキー */}
       <MarqueeTicker />
+
+      {/* 公式バナー */}
+      <CampaignBannerSection />
 
       {/* ② totti自己紹介（信頼の核） */}
       <PersonalIntroSection />
