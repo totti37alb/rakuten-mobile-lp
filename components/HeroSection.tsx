@@ -23,7 +23,7 @@ export default function HeroSection() {
           <div className="w-7 h-7 bg-rakuten-red rounded-sm flex items-center justify-center">
             <span className="text-white font-black text-xs">R</span>
           </div>
-          <span className="font-bold text-sm tracking-wide">楽天モバイル 紹介キャンペーン</span>
+          <span className="font-bold text-sm tracking-wide">楽天モバイル 従業員紹介</span>
         </div>
         <a
           href={REFERRAL_URL}
@@ -38,29 +38,30 @@ export default function HeroSection() {
       {/* メインコンテンツ */}
       <div className="relative z-10 max-w-5xl mx-auto px-6 py-16 md:py-24">
         <div className="max-w-2xl">
-          {/* タグ */}
-          <div className="flex items-center gap-2 mb-6">
-            <span className="tag bg-rakuten-red/20 text-rakuten-red border border-rakuten-red/40 uppercase">
-              友達紹介
+
+          {/* 差出人ラベル */}
+          <div className="inline-flex items-center gap-2 mb-6 border border-white/20 rounded-full px-4 py-1.5 bg-white/5">
+            <span className="w-4 h-4 rounded-full bg-rakuten-red flex items-center justify-center">
+              <span className="text-white text-[8px] font-black">R</span>
             </span>
-            <span className="tag bg-white/10 text-white/70 border border-white/20">
-              期間限定
+            <span className="text-white/60 text-xs font-bold tracking-widest uppercase">
+              From totti · 楽天グループ社員
             </span>
           </div>
 
           {/* ヘッドライン */}
           <h1 className="text-4xl md:text-5xl font-black leading-[1.15] mb-6 tracking-tight">
-            紹介リンクから
+            楽天モバイル、
             <br />
-            <span className="text-rakuten-red">楽天モバイル</span>に
-            <br />
-            乗り換えよう。
+            <span className="text-rakuten-red">試してみませんか。</span>
           </h1>
 
           <p className="text-white/70 text-base md:text-lg mb-4 leading-relaxed">
-            このページの紹介リンク経由で申し込むと、
+            楽天グループ社員の私（totti）の紹介リンクから申し込むと、
             <br className="hidden md:block" />
-            紹介された方・紹介した方、<strong className="text-white">双方にポイントが還元</strong>されます。
+            <strong className="text-white">あなたへ最大14,000P</strong>が還元されます。
+            <br className="hidden md:block" />
+            通常の友達紹介より最大1,000P多い、従業員限定の特典です。
           </p>
 
           {/* ポイント数字 */}
@@ -81,7 +82,7 @@ export default function HeroSection() {
               </p>
             </div>
           </div>
-          <p className="text-white/40 text-xs mb-8">※ 楽天従業員紹介限定。通常の紹介より最大1,000P多い特典です。</p>
+          <p className="text-white/40 text-xs mb-8">※ 楽天従業員紹介限定。このリンク経由での申し込みのみ対象です。</p>
 
           {/* CTA */}
           <a
@@ -94,7 +95,7 @@ export default function HeroSection() {
             <span className="text-xl">→</span>
           </a>
           <p className="mt-3 text-white/40 text-xs">
-            ※ このリンク経由でのみ特典が付与されます
+            ※ 通常の申し込みページでは特典は付与されません
           </p>
         </div>
       </div>

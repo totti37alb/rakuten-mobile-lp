@@ -32,15 +32,17 @@ const faqs = [
     a: "一切ありません。契約期間の縛りも違約金もなく、翌月解約することも可能です。「とりあえず試してみる」という使い方もできます。",
   },
   {
-    q: "紹介した自分にもメリットはある？",
-    a: "あります。紹介した方にも最大7,000ポイント（キャンペーン時期によって変動）が付与されます。何人紹介しても累積でポイントが貰えるので、友人・家族への紹介はとてもお得です。",
+    q: "なぜtottiはこのページを作ったの？",
+    a: "正直に言います。私（totti）が紹介するとポイントが貰えるのは事実です。ただ、それと同時に月3,168円で無制限使えるのは本当にコスパ最強だと思っていて、周りにも知ってほしくてこのページを作りました。強制・勧誘するつもりは一切ありません。「合いそうだな」と思った方にだけ申し込んでもらえれば嬉しいです。",
   },
 ];
 
 function FAQItem({ q, a, index }: { q: string; a: string; index: number }) {
   const [open, setOpen] = useState(false);
   return (
-    <div className={`${open ? "bg-gray-50" : "bg-white"} transition-colors duration-200`}>
+    <div
+      className={`transition-colors duration-200 ${open ? "bg-[#FAF7F2]" : "bg-white"}`}
+    >
       <button
         className="w-full text-left px-6 py-5 flex justify-between items-start gap-4"
         onClick={() => setOpen(!open)}
@@ -60,7 +62,7 @@ function FAQItem({ q, a, index }: { q: string; a: string; index: number }) {
         </span>
       </button>
       {open && (
-        <div className="px-6 pb-5 pl-14 text-gray-600 text-sm leading-relaxed border-t border-gray-100">
+        <div className="px-6 pb-5 pl-14 text-gray-600 text-sm leading-relaxed border-t border-[#E5DDD0]">
           <p className="pt-4">{a}</p>
         </div>
       )}
@@ -70,15 +72,22 @@ function FAQItem({ q, a, index }: { q: string; a: string; index: number }) {
 
 export default function FAQSection() {
   return (
-    <section className="py-20 px-4 bg-gray-50">
+    <section className="py-20 px-4" style={{ backgroundColor: "#FAF7F2" }}>
       <div className="max-w-2xl mx-auto">
-        <div className="text-center mb-12">
-          <p className="text-rakuten-red text-sm font-bold tracking-widest uppercase mb-3">FAQ</p>
-          <h2 className="text-3xl md:text-4xl font-black tracking-tight text-gray-900">
+        <div className="mb-12">
+          <div className="flex items-center gap-4 mb-4">
+            <div className="flex-1 h-px bg-[#E5DDD0]" />
+            <span className="text-[#C0A890] text-xs font-bold tracking-widest uppercase">FAQ</span>
+            <div className="flex-1 h-px bg-[#E5DDD0]" />
+          </div>
+          <h2 className="text-3xl md:text-4xl font-black tracking-tight text-gray-900 text-center">
             よくある質問
           </h2>
         </div>
-        <div className="rounded-2xl overflow-hidden border border-gray-200 divide-y divide-gray-100 shadow-sm">
+        <div
+          className="rounded-2xl overflow-hidden border-2 divide-y shadow-sm"
+          style={{ borderColor: "#E5DDD0", divideColor: "#E5DDD0" }}
+        >
           {faqs.map((item, i) => (
             <FAQItem key={item.q} q={item.q} a={item.a} index={i} />
           ))}

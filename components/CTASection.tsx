@@ -15,12 +15,22 @@ export default function CTASection() {
       />
 
       <div className="relative z-10 max-w-xl mx-auto text-center">
-        <p className="text-rakuten-red text-sm font-bold tracking-widest uppercase mb-4">楽天従業員紹介 限定特典</p>
+
+        {/* 差出人スタンプ */}
+        <div className="inline-flex items-center gap-2 border border-white/20 rounded-full px-4 py-1.5 bg-white/5 mb-6">
+          <span className="w-4 h-4 rounded-full bg-rakuten-red flex items-center justify-center">
+            <span className="text-white text-[8px] font-black">R</span>
+          </span>
+          <span className="text-white/60 text-xs font-bold tracking-widest uppercase">
+            楽天従業員紹介 限定特典
+          </span>
+        </div>
+
         <h2 className="text-3xl md:text-4xl font-black tracking-tight mb-4">
           これ、普通の紹介リンクより<br />お得です。
         </h2>
         <p className="text-white/60 text-base mb-8 leading-relaxed">
-          楽天従業員から紹介された方限定の特別キャンペーン。<br />
+          楽天従業員から紹介されたあなた限定の特別キャンペーン。<br />
           通常の紹介より最大1,000P多い特典が受け取れます。
         </p>
 
@@ -68,6 +78,16 @@ export default function CTASection() {
         <p className="mt-4 text-white/30 text-xs">
           ※ 通常ページからの申し込みは特典対象外です
         </p>
+
+        {/* tottiのサインオフ */}
+        <div className="mt-10 pt-8 border-t border-white/10">
+          <p className="text-white/40 text-xs leading-relaxed">
+            このページはtottiが個人で作成した紹介ページです。<br />
+            少しでも固定費を抑えて、好きなことにお金を使ってほしい。<br />
+            そのきっかけになれたら嬉しいです。
+          </p>
+          <p className="text-white/30 text-xs mt-2 font-bold">— totti</p>
+        </div>
       </div>
     </section>
   );

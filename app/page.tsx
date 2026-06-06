@@ -1,4 +1,5 @@
 import HeroSection from "@/components/HeroSection";
+import MarqueeTicker from "@/components/MarqueeTicker";
 import PersonalIntroSection from "@/components/PersonalIntroSection";
 import BenefitsSection from "@/components/BenefitsSection";
 import FAQSection from "@/components/FAQSection";
@@ -15,11 +16,17 @@ export default function Home() {
       {/* ① ヒーロー */}
       <HeroSection />
 
+      {/* マーキー */}
+      <MarqueeTicker />
+
       {/* ② totti自己紹介（信頼の核） */}
       <PersonalIntroSection />
 
       {/* ③ メリット一覧 */}
       <BenefitsSection />
+
+      {/* マーキー（暗め） */}
+      <MarqueeTicker dark />
 
       {/* ④ FAQ */}
       <FAQSection />
@@ -31,8 +38,11 @@ export default function Home() {
       <CTASection />
 
       {/* フッター */}
-      <footer className="text-gray-500 text-center py-8 text-xs px-4 pb-24 md:pb-8 border-t border-gray-100 bg-white">
-        <p>※ 本ページは楽天モバイルの従業員による個人的な紹介ページです。</p>
+      <footer
+        className="text-center py-8 text-xs px-4 pb-24 md:pb-8 border-t"
+        style={{ backgroundColor: "#FAF7F2", color: "#C0A890", borderColor: "#E5DDD0" }}
+      >
+        <p>※ 本ページはtottiが楽天グループ社員として作成した個人の紹介ページです。</p>
         <p className="mt-1">
           ※ ポイント数・キャンペーン内容は変更される場合があります。最新情報は{" "}
           <a
@@ -47,7 +57,7 @@ export default function Home() {
         </p>
       </footer>
 
-      {/* ⑥ スクロール追従CTA（スマホ向け） */}
+      {/* スクロール追従CTA（スマホ向け） */}
       <FloatingCTA />
     </main>
   );

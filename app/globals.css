@@ -4,14 +4,25 @@
 @tailwind components;
 @tailwind utilities;
 
+@keyframes marquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
 @layer base {
   html {
     scroll-behavior: smooth;
   }
   body {
-    @apply bg-white text-gray-900 antialiased;
+    @apply text-gray-900 antialiased;
+    background-color: #FAF7F2;
     font-family: "Noto Sans JP", "Hiragino Sans", sans-serif;
   }
+}
+
+.animate-marquee {
+  animation: marquee 24s linear infinite;
+  will-change: transform;
 }
 
 @layer components {
