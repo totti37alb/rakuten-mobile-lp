@@ -10,13 +10,14 @@ const config: Config = {
     extend: {
       colors: {
         rakuten: {
-          red: "#BF0000",
-          lightred: "#E60012",
-          gold: "#F5A623",
+          red: "#CC0000",
+          crimson: "#A50000",
+          dark: "#111111",
+          charcoal: "#1E1E1E",
         },
       },
       fontFamily: {
-        sans: ["Hiragino Sans", "Hiragino Kaku Gothic ProN", "Noto Sans JP", "sans-serif"],
+        sans: ['"Noto Sans JP"', '"Hiragino Sans"', '"Hiragino Kaku Gothic ProN"', "sans-serif"],
       },
     },
   },

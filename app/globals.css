@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -7,21 +9,26 @@
     scroll-behavior: smooth;
   }
   body {
-    @apply bg-white text-gray-800;
+    @apply bg-white text-gray-900 antialiased;
+    font-family: "Noto Sans JP", "Hiragino Sans", sans-serif;
   }
 }
 
 @layer components {
-  .cta-button {
-    @apply inline-block bg-rakuten-red text-white font-bold py-4 px-8 rounded-full text-lg shadow-lg hover:bg-rakuten-lightred transition-all duration-200 hover:scale-105 active:scale-95;
+  .cta-primary {
+    @apply inline-flex items-center justify-center gap-2 bg-rakuten-red text-white font-bold py-4 px-8 rounded-lg text-base tracking-wide shadow-lg
+      hover:bg-rakuten-crimson transition-all duration-200 hover:-translate-y-0.5 active:translate-y-0;
   }
-  .cta-button-large {
-    @apply cta-button text-xl py-5 px-10 w-full max-w-sm text-center;
+  .cta-primary-lg {
+    @apply cta-primary text-lg py-5 px-10 w-full max-w-xs;
   }
   .section-title {
-    @apply text-2xl md:text-3xl font-bold text-center mb-8;
+    @apply text-2xl md:text-3xl font-black text-center mb-10 tracking-tight;
   }
   .card {
-    @apply bg-white rounded-2xl shadow-md p-6 border border-gray-100;
+    @apply bg-white rounded-2xl p-6 border border-gray-100 shadow-sm hover:shadow-md transition-shadow duration-200;
+  }
+  .tag {
+    @apply inline-block text-xs font-bold px-3 py-1 rounded-full tracking-wider;
   }
 }

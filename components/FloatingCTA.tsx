@@ -9,32 +9,35 @@ export default function FloatingCTA() {
 
   useEffect(() => {
     const handleScroll = () => {
-      // ヒーローセクション（400px）を過ぎたら表示
-      setVisible(window.scrollY > 400);
+      setVisible(window.scrollY > 500);
     };
-    window.addEventListener("scroll", handleScroll);
+    window.addEventListener("scroll", handleScroll, { passive: true });
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   return (
     <div
-      className={`fixed bottom-0 left-0 right-0 z-50 transition-transform duration-300 ${
-        visible ? "translate-y-0" : "translate-y-full"
+      className={`fixed bottom-0 left-0 right-0 z-50 transition-all duration-300 ${
+        visible ? "translate-y-0 opacity-100" : "translate-y-full opacity-0"
       }`}
     >
-      <div className="bg-white border-t border-gray-200 shadow-2xl px-4 py-3">
-        <div className="max-w-sm mx-auto">
+      <div
+        className="px-4 py-3 border-t border-white/10"
+        style={{ background: "rgba(17,17,17,0.95)", backdropFilter: "blur(12px)" }}
+      >
+        <div className="max-w-sm mx-auto flex items-center gap-3">
+          <div className="flex-1 min-w-0">
+            <p className="text-white/50 text-xs truncate">楽天モバイル 友達紹介キャンペーン</p>
+            <p className="text-white text-xs font-bold">最大7,000ポイント還元</p>
+          </div>
           <a
             href={REFERRAL_URL}
             target="_blank"
             rel="noopener noreferrer"
-            className="block bg-rakuten-red text-white font-extrabold py-4 rounded-full text-center text-lg shadow-lg hover:bg-rakuten-lightred transition-all duration-200 hover:scale-105 active:scale-95"
+            className="flex-shrink-0 bg-rakuten-red hover:bg-rakuten-crimson text-white font-bold text-sm px-5 py-3 rounded-lg transition-colors duration-200"
           >
-            🎁 紹介リンクから申し込む →
+            申し込む →
           </a>
-          <p className="text-center text-xs text-gray-400 mt-1">
-            このリンク経由で特典ポイントGET
-          </p>
         </div>
       </div>
     </div>

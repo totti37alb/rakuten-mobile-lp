@@ -27,7 +27,7 @@ export default function Home() {
       <CTASection />
 
       {/* フッター */}
-      <footer className="bg-gray-800 text-gray-400 text-center py-6 text-xs px-4 pb-24 md:pb-6">
+      <footer className="text-gray-500 text-center py-8 text-xs px-4 pb-24 md:pb-8 border-t border-gray-100 bg-white">
         <p>※ 本ページは楽天モバイルの従業員による個人的な紹介ページです。</p>
         <p className="mt-1">
           ※ ポイント数・キャンペーン内容は変更される場合があります。最新情報は{" "}
@@ -35,7 +35,7 @@ export default function Home() {
             href="https://network.mobile.rakuten.co.jp/"
             target="_blank"
             rel="noopener noreferrer"
-            className="underline hover:text-white"
+            className="underline text-rakuten-red hover:text-rakuten-crimson"
           >
             楽天モバイル公式サイト
           </a>{" "}

@@ -1,58 +1,70 @@
 const benefits = [
   {
-    emoji: "💰",
-    title: "月額最安0円〜",
-    description:
-      "使ったデータ量に応じた3段階料金。3GBまでなら月1,078円、無制限でも3,278円。他社と比べてみてください。",
+    icon: "¥",
+    label: "料金",
+    title: "月額最安 1,078円〜",
+    description: "3GBまで1,078円、無制限でも3,278円。データ使用量に応じた自動調整で無駄ゼロ。",
   },
   {
-    emoji: "📡",
+    icon: "∞",
+    label: "データ",
     title: "データ無制限",
-    description:
-      "月3,278円でデータ使い放題。競馬中継・サッカーのDAZN視聴もギガ気にせず楽しめます。",
+    description: "月3,278円でギガ上限なし。DAZN・競馬中継・SNSもストレスフリーで使い放題。",
   },
   {
-    emoji: "🎁",
+    icon: "P",
+    label: "ポイント",
     title: "楽天ポイント還元",
-    description:
-      "申し込みでポイント還元。楽天市場でのお買い物にも使えるポイントがザクザク貯まります。",
+    description: "通信費が楽天市場のポイント倍率を底上げ。SPUで最大+4倍になりお買い物もお得に。",
   },
   {
-    emoji: "📞",
-    title: "国内通話無料",
-    description:
-      "Rakuten Linkアプリを使えば国内通話かけ放題（無料）。電話代の節約にもなります。",
+    icon: "☎",
+    label: "通話",
+    title: "国内通話かけ放題",
+    description: "Rakuten Linkアプリ経由で国内通話が無料。毎月の電話代を丸ごと節約できる。",
   },
   {
-    emoji: "🏟️",
-    title: "競馬・サッカー観戦にも",
-    description:
-      "スタジアムや競馬場でもデータ無制限なら安心。SNS投稿・ライブ配信視聴もストレスなし。",
+    icon: "🏟",
+    label: "観戦",
+    title: "競馬・サッカー観戦に最適",
+    description: "スタジアム・競馬場でのライブ視聴、リアルタイム投稿もギガを気にせず楽しめる。",
   },
   {
-    emoji: "🔄",
-    title: "いつでも解約OK",
-    description:
-      "契約期間の縛りなし、違約金なし。試してみて合わなければすぐ解約できる安心設計。",
+    icon: "↩",
+    label: "縛りなし",
+    title: "いつでも解約・乗り換えOK",
+    description: "違約金・契約期間の縛り一切なし。合わなければすぐ他社に戻せる安心設計。",
   },
 ];
 
 export default function BenefitsSection() {
   return (
-    <section className="py-16 px-4 bg-gray-50">
-      <div className="max-w-3xl mx-auto">
-        <h2 className="section-title">
-          <span className="text-rakuten-red">楽天モバイルのメリット</span>まとめ
-        </h2>
+    <section className="py-20 px-4 bg-white">
+      <div className="max-w-4xl mx-auto">
+        {/* セクションヘッダー */}
+        <div className="text-center mb-12">
+          <p className="text-rakuten-red text-sm font-bold tracking-widest uppercase mb-3">Benefits</p>
+          <h2 className="text-3xl md:text-4xl font-black tracking-tight text-gray-900">
+            楽天モバイルを選ぶ理由
+          </h2>
+        </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
           {benefits.map((b) => (
-            <div key={b.title} className="card flex gap-4 items-start">
-              <span className="text-3xl flex-shrink-0">{b.emoji}</span>
-              <div>
-                <h3 className="font-bold text-lg mb-1">{b.title}</h3>
-                <p className="text-gray-600 text-sm leading-relaxed">{b.description}</p>
+            <div
+              key={b.title}
+              className="group relative bg-white border border-gray-100 rounded-2xl p-6 hover:border-rakuten-red/30 hover:shadow-lg transition-all duration-200"
+            >
+              {/* アイコン */}
+              <div className="w-11 h-11 rounded-xl bg-rakuten-red/8 flex items-center justify-center mb-4 group-hover:bg-rakuten-red/15 transition-colors">
+                <span className="text-rakuten-red font-black text-lg">{b.icon}</span>
               </div>
+              {/* ラベル */}
+              <p className="text-xs font-bold text-rakuten-red tracking-wider uppercase mb-1.5">{b.label}</p>
+              {/* タイトル */}
+              <h3 className="font-bold text-gray-900 text-base mb-2 leading-tight">{b.title}</h3>
+              {/* 説明 */}
+              <p className="text-gray-500 text-sm leading-relaxed">{b.description}</p>
             </div>
           ))}
         </div>
