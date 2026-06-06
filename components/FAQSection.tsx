@@ -86,7 +86,7 @@ export default function FAQSection() {
         </div>
         <div
           className="rounded-2xl overflow-hidden border-2 divide-y shadow-sm"
-          style={{ borderColor: "#E5DDD0", divideColor: "#E5DDD0" }}
+          style={{ borderColor: "#E5DDD0" }}
         >
           {faqs.map((item, i) => (
             <FAQItem key={item.q} q={item.q} a={item.a} index={i} />
