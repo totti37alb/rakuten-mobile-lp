@@ -1,0 +1,52 @@
+<svg width="900" height="280" viewBox="0 0 900 280" xmlns="http://www.w3.org/2000/svg" font-family="'Noto Sans JP', 'Hiragino Sans', sans-serif">
+  <!-- Background -->
+  <rect width="900" height="280" rx="20" fill="#111111"/>
+
+  <!-- Glow -->
+  <ellipse cx="450" cy="280" rx="400" ry="150" fill="#CC0000" fill-opacity="0.08"/>
+
+  <!-- STEP 01 card -->
+  <rect x="30" y="50" width="240" height="180" rx="16" fill="white" fill-opacity="0.05" stroke="white" stroke-opacity="0.1" stroke-width="1"/>
+  <circle cx="90" cy="100" r="26" fill="#CC0000"/>
+  <text x="90" y="107" text-anchor="middle" fill="white" font-size="14" font-weight="900">01</text>
+  <text x="150" y="97" fill="white" font-size="15" font-weight="700">紹介リンクから</text>
+  <text x="150" y="115" fill="white" font-size="15" font-weight="700">申し込む</text>
+  <text x="55" y="152" fill="white" fill-opacity="0.45" font-size="12">楽天IDでログイン後、</text>
+  <text x="55" y="169" fill="white" fill-opacity="0.45" font-size="12">Rakuten最強プランに申し込む</text>
+  <rect x="55" y="192" width="185" height="24" rx="12" fill="white" fill-opacity="0.06" stroke="white" stroke-opacity="0.1" stroke-width="1"/>
+  <circle cx="70" cy="204" r="4" fill="#CC0000"/>
+  <text x="85" y="208" fill="white" fill-opacity="0.4" font-size="11">翌々月末日 23:59 まで</text>
+
+  <!-- Arrow 1 -->
+  <text x="285" y="148" text-anchor="middle" fill="white" fill-opacity="0.3" font-size="28">→</text>
+
+  <!-- STEP 02 card -->
+  <rect x="330" y="50" width="240" height="180" rx="16" fill="white" fill-opacity="0.05" stroke="white" stroke-opacity="0.1" stroke-width="1"/>
+  <circle cx="390" cy="100" r="26" fill="#CC0000"/>
+  <text x="390" y="107" text-anchor="middle" fill="white" font-size="14" font-weight="900">02</text>
+  <text x="450" y="97" fill="white" font-size="15" font-weight="700">プランの利用を</text>
+  <text x="450" y="115" fill="white" font-size="15" font-weight="700">開始する</text>
+  <text x="355" y="152" fill="white" fill-opacity="0.45" font-size="12">SIM/eSIM の開通を完了。</text>
+  <text x="355" y="169" fill="white" fill-opacity="0.45" font-size="12">MNPは番号移行完了日が基準</text>
+  <rect x="355" y="192" width="185" height="24" rx="12" fill="white" fill-opacity="0.06" stroke="white" stroke-opacity="0.1" stroke-width="1"/>
+  <circle cx="370" cy="204" r="4" fill="#CC0000"/>
+  <text x="385" y="208" fill="white" fill-opacity="0.4" font-size="11">翌々月末日 23:59 まで</text>
+
+  <!-- Arrow 2 -->
+  <text x="585" y="148" text-anchor="middle" fill="white" fill-opacity="0.3" font-size="28">→</text>
+
+  <!-- STEP 03 card -->
+  <rect x="630" y="50" width="240" height="180" rx="16" fill="#CC0000" fill-opacity="0.1" stroke="#CC0000" stroke-opacity="0.25" stroke-width="1"/>
+  <circle cx="690" cy="100" r="26" fill="#CC0000"/>
+  <text x="690" y="107" text-anchor="middle" fill="white" font-size="14" font-weight="900">03</text>
+  <text x="750" y="97" fill="white" font-size="15" font-weight="700">Rakuten Linkで</text>
+  <text x="750" y="115" fill="white" font-size="15" font-weight="700">10秒通話する</text>
+  <text x="655" y="152" fill="white" fill-opacity="0.45" font-size="12">アプリから発信で10秒以上。</text>
+  <text x="655" y="169" fill="white" fill-opacity="0.45" font-size="12">0570への発信は対象外</text>
+  <rect x="655" y="192" width="185" height="24" rx="12" fill="#CC0000" fill-opacity="0.15" stroke="#CC0000" stroke-opacity="0.3" stroke-width="1"/>
+  <circle cx="670" cy="204" r="4" fill="#CC0000"/>
+  <text x="685" y="208" fill="#CC0000" font-size="11" font-weight="600">翌々月末日 23:59 まで</text>
+
+  <!-- Bottom label -->
+  <text x="450" y="256" text-anchor="middle" fill="white" fill-opacity="0.2" font-size="12">3つすべて達成で最大 14,000P 還元（条件達成月 +4〜6ヶ月後に分割付与）</text>
+</svg>

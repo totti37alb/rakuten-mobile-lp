@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 
 export type ArticleMeta = {
   slug: string;
@@ -6,6 +7,7 @@ export type ArticleMeta = {
   date: string;
   excerpt: string;
   emoji?: string;
+  thumbnail?: string;
 };
 
 export default function ArticlesSection({ articles }: { articles: ArticleMeta[] }) {
@@ -31,16 +33,31 @@ export default function ArticlesSection({ articles }: { articles: ArticleMeta[] 
             <Link
               key={article.slug}
               href={`/articles/${article.slug}`}
-              className="group flex gap-4 p-6 rounded-2xl border-2 bg-white hover:border-rakuten-red/40 hover:shadow-md transition-all duration-200"
+              className="group flex flex-col rounded-2xl border-2 bg-white hover:border-rakuten-red/40 hover:shadow-md transition-all duration-200 overflow-hidden"
               style={{ borderColor: "#E5DDD0" }}
             >
-              <div
-                className="w-12 h-12 rounded-xl flex items-center justify-center flex-shrink-0 text-2xl border-2 group-hover:border-rakuten-red/20 transition-colors"
-                style={{ backgroundColor: "#FAF7F2", borderColor: "#E5DDD0" }}
-              >
-                {article.emoji ?? "📄"}
-              </div>
-              <div className="min-w-0">
+              {/* サムネイル */}
+              {article.thumbnail ? (
+                <div className="relative w-full aspect-[1200/630] overflow-hidden bg-[#111]">
+                  <Image
+                    src={article.thumbnail}
+                    alt={article.title}
+                    fill
+                    className="object-cover group-hover:scale-[1.02] transition-transform duration-300"
+                    unoptimized
+                  />
+                </div>
+              ) : (
+                <div
+                  className="w-full aspect-[1200/630] flex items-center justify-center text-5xl border-b-2"
+                  style={{ backgroundColor: "#FAF7F2", borderColor: "#E5DDD0" }}
+                >
+                  {article.emoji ?? "📄"}
+                </div>
+              )}
+
+              {/* テキスト */}
+              <div className="p-5">
                 <p className="text-xs text-[#C0A890] mb-1.5 font-medium">{article.date}</p>
                 <h3 className="font-bold text-gray-900 text-sm leading-snug group-hover:text-rakuten-red transition-colors mb-2">
                   {article.title}

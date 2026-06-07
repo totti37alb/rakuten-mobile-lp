@@ -12,6 +12,7 @@ export type ArticleMeta = {
   date: string;
   excerpt: string;
   emoji?: string;
+  thumbnail?: string;
 };
 
 export type Article = ArticleMeta & {
@@ -36,6 +37,7 @@ export function getAllArticles(): ArticleMeta[] {
         date: data.date ?? "",
         excerpt: data.excerpt ?? "",
         emoji: data.emoji ?? "📄",
+        thumbnail: data.thumbnail ?? null,
       } as ArticleMeta;
     });
 
