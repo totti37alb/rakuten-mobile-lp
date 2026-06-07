@@ -87,11 +87,15 @@ export default async function ArticlePage({
           className="flex items-center gap-3 pb-8 mb-10 border-b"
           style={{ borderColor: "#E5DDD0" }}
         >
-          <div
-            className="w-10 h-10 rounded-full flex items-center justify-center text-white font-black text-sm flex-shrink-0"
-            style={{ backgroundColor: "#CC0000" }}
-          >
-            T
+          <div className="w-10 h-10 rounded-full flex-shrink-0 overflow-hidden">
+            <Image
+              src="/totti.png"
+              alt="totti"
+              width={40}
+              height={40}
+              className="w-full h-full object-cover"
+              unoptimized
+            />
           </div>
           <div>
             <p className="text-sm font-bold text-gray-800">totti</p>
