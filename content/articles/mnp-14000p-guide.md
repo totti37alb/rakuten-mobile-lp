@@ -3,7 +3,7 @@ title: "【2026年最新】楽天モバイルMNP乗り換えで14,000P獲得す�
 date: "2026-06-07"
 excerpt: "MNP乗り換えで楽天ポイント14,000Pが還元される従業員紹介キャンペーンの条件・手順・注意点を、楽天グループ社員のtottiが丸ごと解説。"
 emoji: "📱"
-thumbnail: "/articles/mnp-guide-thumb.svg"
+thumbnail: "/articles/14K.png"
 ---
 
 **「スマホ代、なんとかしたいけど乗り換えってめんどくさい…」と思っていませんか？**

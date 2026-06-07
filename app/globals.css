@@ -25,6 +25,175 @@
   will-change: transform;
 }
 
+/* ===== 記事本文スタイル（note.com 水準） ===== */
+.prose-note {
+  font-size: 17px;
+  line-height: 1.9;
+  color: #1a1a1a;
+  word-break: break-word;
+  overflow-wrap: break-word;
+}
+
+.prose-note p {
+  margin-top: 0;
+  margin-bottom: 1.75em;
+}
+
+.prose-note h2 {
+  font-size: 1.35em;
+  font-weight: 900;
+  line-height: 1.45;
+  margin-top: 2.5em;
+  margin-bottom: 0.75em;
+  padding: 0.6em 0.9em;
+  border-left: 5px solid #CC0000;
+  background: #FFF7F7;
+  border-radius: 0 6px 6px 0;
+  color: #111;
+}
+
+.prose-note h3 {
+  font-size: 1.1em;
+  font-weight: 800;
+  line-height: 1.5;
+  margin-top: 2em;
+  margin-bottom: 0.6em;
+  color: #111;
+}
+
+.prose-note strong {
+  font-weight: 800;
+  color: #111;
+}
+
+.prose-note em {
+  font-style: normal;
+  font-weight: 700;
+  color: #CC0000;
+}
+
+.prose-note a {
+  color: #CC0000;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+.prose-note a:hover {
+  color: #A50000;
+}
+
+.prose-note ul {
+  margin: 1.5em 0;
+  padding-left: 0;
+  list-style-type: none;
+}
+.prose-note ul li {
+  position: relative;
+  padding-left: 1.5em;
+}
+.prose-note ul li::before {
+  content: "▶";
+  position: absolute;
+  left: 0;
+  color: #CC0000;
+  font-size: 0.65em;
+  top: 0.45em;
+}
+.prose-note ol {
+  margin: 1.5em 0;
+  padding-left: 1.5em;
+  list-style-type: decimal;
+}
+.prose-note li {
+  margin-bottom: 0.5em;
+  padding-left: 0.25em;
+}
+
+.prose-note blockquote {
+  border: none;
+  margin: 1.75em 0;
+  padding: 1em 1.25em 1em 1.4em;
+  color: #333;
+  background: #FFFBEA;
+  border-left: 4px solid #F5A623;
+  border-radius: 0 8px 8px 0;
+  position: relative;
+}
+.prose-note blockquote::before {
+  content: "💡";
+  position: absolute;
+  top: 1em;
+  left: -0.1em;
+  font-size: 0.85em;
+  line-height: 1;
+}
+.prose-note blockquote {
+  padding-left: 2.2em;
+}
+.prose-note blockquote p {
+  margin-bottom: 0;
+}
+
+.prose-note table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 2em 0;
+  font-size: 0.9em;
+}
+.prose-note th {
+  background: #1a1a1a;
+  color: white;
+  font-weight: 700;
+  padding: 10px 14px;
+  text-align: left;
+}
+.prose-note td {
+  padding: 10px 14px;
+  border-bottom: 1px solid #E5DDD0;
+  vertical-align: top;
+}
+.prose-note tr:last-child td {
+  border-bottom: none;
+}
+.prose-note tr:nth-child(even) td {
+  background: #FAF7F2;
+}
+
+.prose-note img {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  margin: 2em 0;
+}
+
+.prose-note hr {
+  border: none;
+  margin: 2.5em 0;
+  text-align: center;
+  overflow: visible;
+  height: 0;
+}
+.prose-note hr::after {
+  content: "◆ ◆ ◆";
+  display: inline-block;
+  color: #CC0000;
+  font-size: 0.55em;
+  letter-spacing: 0.4em;
+  opacity: 0.5;
+  position: relative;
+  top: -0.5em;
+}
+
+.prose-note code {
+  background: #f4f0eb;
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-size: 0.88em;
+  font-family: ui-monospace, monospace;
+  color: #CC0000;
+}
+
+/* ============================= */
+
 @layer components {
   .cta-primary {
     @apply inline-flex items-center justify-center gap-2 bg-rakuten-red text-white font-bold py-4 px-8 rounded-lg text-base tracking-wide shadow-lg
