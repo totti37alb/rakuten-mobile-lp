@@ -20,21 +20,17 @@ export default async function ArticlePage({
   if (!article) notFound();
 
   return (
-    <main className="min-h-screen pb-32" style={{ backgroundColor: "#FAF7F2" }}>
+    <main className="min-h-screen pb-32 bg-[#e8ebe6]">
 
       {/* ヘッダー */}
-      <header
-        className="sticky top-0 z-40 border-b"
-        style={{ backgroundColor: "#FAF7F2", borderColor: "#E5DDD0" }}
-      >
-        <div className="max-w-3xl mx-auto px-4 h-14 flex justify-between items-center">
+      <header className="sticky top-0 z-40 border-b bg-[#e8ebe6]/90 border-[#d0d4cf]" style={{ backdropFilter: "blur(12px)" }}>
+        <div className="max-w-3xl mx-auto px-5 h-14 flex justify-between items-center">
           <Link
             href="/"
-            className="flex items-center gap-2 text-sm font-bold hover:opacity-70 transition-opacity"
-            style={{ color: "#C0A890" }}
+            className="flex items-center gap-2 text-sm font-semibold text-[#868685] hover:text-[#0e0f0c] transition-colors"
           >
             <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
-              <path d="M10 3L5 8l5 5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+              <path d="M10 3L5 8l5 5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
             </svg>
             トップへ戻る
           </Link>
@@ -42,7 +38,7 @@ export default async function ArticlePage({
             href={REFERRAL_URL}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-1.5 bg-rakuten-red hover:bg-rakuten-crimson text-white text-xs font-bold px-4 py-2 rounded-full transition-colors"
+            className="inline-flex items-center gap-1.5 bg-rakuten-red hover:bg-rakuten-crimson text-white text-xs font-bold px-4 py-2 rounded-full transition-all duration-200"
           >
             紹介リンクから申し込む →
           </a>
@@ -50,7 +46,7 @@ export default async function ArticlePage({
       </header>
 
       {/* 記事本文エリア */}
-      <div className="max-w-2xl mx-auto px-4 pt-10 md:pt-14">
+      <div className="max-w-2xl mx-auto px-5 pt-10 md:pt-14">
 
         {/* サムネイル */}
         {article.thumbnail && (
@@ -69,25 +65,19 @@ export default async function ArticlePage({
         {/* メタ情報 */}
         <div className="mb-8">
           <div className="flex items-center gap-3 mb-5">
-            <span
-              className="text-xs font-bold px-3 py-1 rounded-full border"
-              style={{ color: "#C0A890", borderColor: "#E5DDD0", backgroundColor: "white" }}
-            >
+            <span className="text-[11px] font-semibold px-3 py-1 rounded-full border border-[#d0d4cf] text-[#868685] bg-white">
               楽天モバイル
             </span>
-            <time className="text-xs" style={{ color: "#C0A890" }}>{article.date}</time>
+            <time className="text-[11px] text-[#868685] font-medium">{article.date}</time>
           </div>
-          <h1 className="text-2xl md:text-[28px] font-black leading-[1.5] tracking-tight text-gray-900">
+          <h1 className="text-2xl md:text-[28px] font-black leading-[1.5] tracking-tight text-[#0e0f0c]">
             {article.title}
           </h1>
         </div>
 
         {/* 著者 */}
-        <div
-          className="flex items-center gap-3 pb-8 mb-10 border-b"
-          style={{ borderColor: "#E5DDD0" }}
-        >
-          <div className="w-10 h-10 rounded-full flex-shrink-0 overflow-hidden">
+        <div className="flex items-center gap-3 pb-8 mb-10 border-b border-[#d0d4cf]">
+          <div className="w-10 h-10 rounded-full flex-shrink-0 overflow-hidden border border-[#d0d4cf]">
             <Image
               src="/totti.png"
               alt="totti"
@@ -98,8 +88,8 @@ export default async function ArticlePage({
             />
           </div>
           <div>
-            <p className="text-sm font-bold text-gray-800">totti</p>
-            <p className="text-xs" style={{ color: "#C0A890" }}>楽天グループ社員 · 30歳</p>
+            <p className="text-sm font-bold text-[#0e0f0c]">totti</p>
+            <p className="text-[11px] text-[#868685]">楽天グループ社員 · 30歳</p>
           </div>
         </div>
 
@@ -110,34 +100,31 @@ export default async function ArticlePage({
         />
 
         {/* 記事内CTA */}
-        <div
-          className="mt-16 rounded-2xl p-8 text-center border-2"
-          style={{ backgroundColor: "white", borderColor: "#E5DDD0" }}
-        >
-          <div className="inline-flex items-center gap-2 border rounded-full px-4 py-1.5 mb-5" style={{ borderColor: "#E5DDD0" }}>
+        <div className="mt-16 rounded-2xl p-8 text-center border border-[#d0d4cf]/60 bg-white shadow-sm">
+          <div className="inline-flex items-center gap-2 border border-[#d0d4cf] rounded-full px-4 py-1.5 mb-5">
             <div className="w-4 h-4 rounded-full bg-rakuten-red flex items-center justify-center">
               <span className="text-white text-[8px] font-black">R</span>
             </div>
-            <span className="text-xs font-bold tracking-widest uppercase" style={{ color: "#C0A890" }}>
+            <span className="text-[10px] font-semibold tracking-[0.12em] uppercase text-[#868685]">
               楽天従業員紹介 限定特典
             </span>
           </div>
-          <p className="text-xl font-black text-gray-900 mb-2 leading-snug">
+          <p className="text-xl font-black text-[#0e0f0c] mb-2 leading-snug">
             紹介リンクから申し込むと<br />
             <span className="text-rakuten-red">最大 14,000P 還元</span>
           </p>
-          <p className="text-sm mb-6" style={{ color: "#C0A890" }}>
+          <p className="text-sm mb-6 text-[#868685]">
             通常の友達紹介より最大1,000P多い、従業員限定特典です。
           </p>
           <a
             href={REFERRAL_URL}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 bg-rakuten-red hover:bg-rakuten-crimson text-white font-bold text-base px-8 py-4 rounded-xl transition-all hover:-translate-y-0.5 shadow-lg w-full justify-center max-w-xs"
+            className="inline-flex items-center gap-2 bg-rakuten-red hover:bg-rakuten-crimson text-white font-bold text-base px-8 py-4 rounded-2xl transition-all duration-200 hover:-translate-y-0.5 shadow-lg shadow-rakuten-red/20 w-full justify-center max-w-xs"
           >
             紹介リンクから申し込む →
           </a>
-          <p className="text-xs mt-3" style={{ color: "#C0A890" }}>
+          <p className="text-xs mt-3 text-[#868685]">
             ※ 通常ページからの申し込みは特典対象外です
           </p>
         </div>
@@ -146,8 +133,7 @@ export default async function ArticlePage({
         <div className="mt-10 text-center">
           <Link
             href="/"
-            className="text-sm underline hover:opacity-70 transition-opacity"
-            style={{ color: "#C0A890" }}
+            className="text-sm text-[#868685] underline underline-offset-2 hover:text-[#0e0f0c] transition-colors"
           >
             ← トップページに戻る
           </Link>

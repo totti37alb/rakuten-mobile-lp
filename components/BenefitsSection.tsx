@@ -39,43 +39,37 @@ const benefits = [
 
 export default function BenefitsSection() {
   return (
-    <section className="py-20 px-4" style={{ backgroundColor: "#FAF7F2" }}>
+    <section className="py-24 px-5 bg-[#e8ebe6]">
       <div className="max-w-4xl mx-auto">
+
         {/* セクションヘッダー */}
-        <div className="mb-12">
-          <div className="flex items-center gap-4 mb-4">
-            <div className="flex-1 h-px bg-[#E5DDD0]" />
-            <span className="text-[#C0A890] text-xs font-bold tracking-widest uppercase">
-              Why Rakuten Mobile
-            </span>
-            <div className="flex-1 h-px bg-[#E5DDD0]" />
-          </div>
-          <h2 className="text-3xl md:text-4xl font-black tracking-tight text-gray-900 text-center">
-            私が選んだ6つの理由
+        <div className="mb-14 text-center">
+          <span className="text-[#868685] text-[11px] font-semibold tracking-[0.15em] uppercase">
+            Why Rakuten Mobile
+          </span>
+          <h2 className="text-4xl md:text-5xl font-black tracking-tight text-[#0e0f0c] mt-3 leading-tight">
+            私が選んだ<br className="md:hidden" />6つの理由
           </h2>
-          <p className="text-center text-[#C0A890] text-sm mt-2 font-medium">by totti</p>
+          <p className="text-[#868685] text-sm mt-2 font-medium">by totti</p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-3">
           {benefits.map((b) => (
             <div
               key={b.title}
-              className="group relative bg-white border-2 rounded-2xl p-6 hover:border-rakuten-red/40 hover:shadow-lg transition-all duration-200"
-              style={{ borderColor: "#E5DDD0" }}
+              className="group relative bg-white rounded-2xl p-6 border border-[#d0d4cf]/60 hover:border-rakuten-red/30 hover:shadow-md transition-all duration-200"
             >
-              {/* 番号バッジ */}
-              <div className="flex items-start justify-between mb-4">
-                <span className="text-[#E5DDD0] font-black text-3xl leading-none group-hover:text-rakuten-red/20 transition-colors">
+              {/* 番号 */}
+              <div className="flex items-start justify-between mb-5">
+                <span className="text-[#e8ebe6] font-black text-4xl leading-none select-none group-hover:text-rakuten-red/10 transition-colors">
                   {b.num}
                 </span>
-                <span className="text-[10px] font-bold tracking-widest uppercase bg-[#FAF7F2] border border-[#E5DDD0] text-[#C0A890] px-2 py-0.5 rounded-full">
+                <span className="text-[10px] font-semibold tracking-[0.1em] uppercase bg-[#e8ebe6] text-[#868685] px-2.5 py-1 rounded-full">
                   {b.label}
                 </span>
               </div>
-              {/* タイトル */}
-              <h3 className="font-bold text-gray-900 text-base mb-2 leading-tight">{b.title}</h3>
-              {/* 説明 */}
-              <p className="text-gray-500 text-sm leading-relaxed">{b.description}</p>
+              <h3 className="font-bold text-[#0e0f0c] text-base mb-2 leading-snug">{b.title}</h3>
+              <p className="text-[#868685] text-sm leading-relaxed">{b.description}</p>
             </div>
           ))}
         </div>

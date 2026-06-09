@@ -44,27 +44,27 @@ const faqs = [
 function FAQItem({ q, a, index }: { q: string; a: string; index: number }) {
   const [open, setOpen] = useState(false);
   return (
-    <div className={`transition-colors duration-200 ${open ? "bg-[#FAF7F2]" : "bg-white"}`}>
+    <div className={`transition-colors duration-200 ${open ? "bg-[#e8ebe6]" : "bg-white"}`}>
       <button
         className="w-full text-left px-6 py-5 flex justify-between items-start gap-4"
         onClick={() => setOpen(!open)}
       >
         <div className="flex items-start gap-4">
-          <span className="text-rakuten-red font-black text-sm mt-0.5 flex-shrink-0">
+          <span className="text-rakuten-red font-black text-xs tracking-wider mt-0.5 flex-shrink-0">
             Q{String(index + 1).padStart(2, "0")}
           </span>
-          <span className="font-bold text-gray-900 text-sm md:text-base leading-relaxed">{q}</span>
+          <span className="font-semibold text-[#0e0f0c] text-sm md:text-base leading-relaxed">{q}</span>
         </div>
         <span
-          className={`text-gray-400 flex-shrink-0 transition-transform duration-200 mt-0.5 ${open ? "rotate-45" : ""}`}
+          className={`text-[#868685] flex-shrink-0 transition-transform duration-200 mt-0.5 ${open ? "rotate-45" : ""}`}
         >
           <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
-            <path d="M8 2v12M2 8h12" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
+            <path d="M8 2v12M2 8h12" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
           </svg>
         </span>
       </button>
       {open && (
-        <div className="px-6 pb-5 pl-14 text-gray-600 text-sm leading-relaxed border-t border-[#E5DDD0]">
+        <div className="px-6 pb-5 pl-14 text-[#454745] text-sm leading-relaxed border-t border-[#d0d4cf]">
           <p className="pt-4">{a}</p>
         </div>
       )}
@@ -74,33 +74,29 @@ function FAQItem({ q, a, index }: { q: string; a: string; index: number }) {
 
 export default function FAQSection() {
   return (
-    <section className="py-20 px-4" style={{ backgroundColor: "#FAF7F2" }}>
+    <section className="py-24 px-5 bg-[#e8ebe6]">
       <div className="max-w-2xl mx-auto">
-        <div className="mb-12">
-          <div className="flex items-center gap-4 mb-4">
-            <div className="flex-1 h-px bg-[#E5DDD0]" />
-            <span className="text-[#C0A890] text-xs font-bold tracking-widest uppercase">FAQ</span>
-            <div className="flex-1 h-px bg-[#E5DDD0]" />
-          </div>
-          <h2 className="text-3xl md:text-4xl font-black tracking-tight text-gray-900 text-center">
+
+        <div className="mb-14 text-center">
+          <span className="text-[#868685] text-[11px] font-semibold tracking-[0.15em] uppercase">FAQ</span>
+          <h2 className="text-4xl md:text-5xl font-black tracking-tight text-[#0e0f0c] mt-3">
             よくある質問
           </h2>
         </div>
-        <div
-          className="rounded-2xl overflow-hidden border-2 divide-y shadow-sm"
-          style={{ borderColor: "#E5DDD0" }}
-        >
+
+        <div className="rounded-2xl overflow-hidden border border-[#d0d4cf]/60 divide-y divide-[#d0d4cf] shadow-sm">
           {faqs.map((item, i) => (
             <FAQItem key={item.q} q={item.q} a={item.a} index={i} />
           ))}
         </div>
-        <p className="text-center text-[#C0A890] text-xs mt-6 leading-relaxed">
+
+        <p className="text-center text-[#868685] text-xs mt-6 leading-relaxed">
           ※ 詳細な条件は{" "}
           <a
             href="https://network.mobile.rakuten.co.jp/campaign/referral-application-employee/"
             target="_blank"
             rel="noopener noreferrer"
-            className="underline hover:text-rakuten-red transition-colors"
+            className="underline underline-offset-2 hover:text-rakuten-red transition-colors"
           >
             楽天モバイル公式キャンペーンページ（コード：2162）
           </a>{" "}

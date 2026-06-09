@@ -14,18 +14,15 @@ export default function ArticlesSection({ articles }: { articles: ArticleMeta[] 
   if (articles.length === 0) return null;
 
   return (
-    <section className="py-20 px-4" style={{ backgroundColor: "#FAF7F2" }}>
+    <section className="py-24 px-5 bg-[#e8ebe6]">
       <div className="max-w-4xl mx-auto">
-        <div className="mb-12">
-          <div className="flex items-center gap-4 mb-4">
-            <div className="flex-1 h-px bg-[#E5DDD0]" />
-            <span className="text-[#C0A890] text-xs font-bold tracking-widest uppercase">Articles</span>
-            <div className="flex-1 h-px bg-[#E5DDD0]" />
-          </div>
-          <h2 className="text-3xl md:text-4xl font-black tracking-tight text-gray-900 text-center">
+
+        <div className="mb-14 text-center">
+          <span className="text-[#868685] text-[11px] font-semibold tracking-[0.15em] uppercase">Articles</span>
+          <h2 className="text-4xl md:text-5xl font-black tracking-tight text-[#0e0f0c] mt-3">
             お役立ち情報
           </h2>
-          <p className="text-[#C0A890] text-sm mt-2 text-center font-medium">定期更新中</p>
+          <p className="text-[#868685] text-sm mt-2 font-medium">定期更新中</p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -33,12 +30,11 @@ export default function ArticlesSection({ articles }: { articles: ArticleMeta[] 
             <Link
               key={article.slug}
               href={`/articles/${article.slug}`}
-              className="group flex flex-col rounded-2xl border-2 bg-white hover:border-rakuten-red/40 hover:shadow-md transition-all duration-200 overflow-hidden"
-              style={{ borderColor: "#E5DDD0" }}
+              className="group flex flex-col rounded-2xl border border-[#d0d4cf]/60 bg-white hover:border-rakuten-red/30 hover:shadow-md transition-all duration-200 overflow-hidden"
             >
               {/* サムネイル */}
               {article.thumbnail ? (
-                <div className="relative w-full aspect-[1200/630] overflow-hidden bg-[#111]">
+                <div className="relative w-full aspect-[1200/630] overflow-hidden bg-[#0e0f0c]">
                   <Image
                     src={article.thumbnail}
                     alt={article.title}
@@ -48,21 +44,18 @@ export default function ArticlesSection({ articles }: { articles: ArticleMeta[] 
                   />
                 </div>
               ) : (
-                <div
-                  className="w-full aspect-[1200/630] flex items-center justify-center text-5xl border-b-2"
-                  style={{ backgroundColor: "#FAF7F2", borderColor: "#E5DDD0" }}
-                >
+                <div className="w-full aspect-[1200/630] flex items-center justify-center text-5xl bg-[#e8ebe6] border-b border-[#d0d4cf]">
                   {article.emoji ?? "📄"}
                 </div>
               )}
 
               {/* テキスト */}
               <div className="p-5">
-                <p className="text-xs text-[#C0A890] mb-1.5 font-medium">{article.date}</p>
-                <h3 className="font-bold text-gray-900 text-sm leading-snug group-hover:text-rakuten-red transition-colors mb-2">
+                <p className="text-[11px] text-[#868685] mb-1.5 font-medium">{article.date}</p>
+                <h3 className="font-bold text-[#0e0f0c] text-sm leading-snug group-hover:text-rakuten-red transition-colors mb-2">
                   {article.title}
                 </h3>
-                <p className="text-xs text-gray-500 leading-relaxed line-clamp-2">{article.excerpt}</p>
+                <p className="text-xs text-[#868685] leading-relaxed line-clamp-2">{article.excerpt}</p>
               </div>
             </Link>
           ))}

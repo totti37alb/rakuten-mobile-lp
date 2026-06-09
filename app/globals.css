@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&family=Noto+Sans+JP:wght@400;500;700;900&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -40,8 +40,8 @@
   }
   body {
     @apply text-gray-900 antialiased;
-    background-color: #FAF7F2;
-    font-family: "Noto Sans JP", "Hiragino Sans", sans-serif;
+    background-color: #e8ebe6;
+    font-family: "Inter", "Noto Sans JP", "Hiragino Sans", sans-serif;
   }
 }
 
@@ -180,7 +180,7 @@
   border-bottom: none;
 }
 .prose-note tr:nth-child(even) td {
-  background: #FAF7F2;
+  background: #e8ebe6;
 }
 
 .prose-note img {
