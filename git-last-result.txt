@@ -1,3 +1,3 @@
+9762bb2 content: update coverage-area article with 2026 data
 e05f3c6 feat: redesign all pages with Wise editorial design system
 9ea1e49 feat: redesign all pages with Wise editorial design system
-55afa7f feat: use totti.png as author avatar
