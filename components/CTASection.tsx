@@ -76,8 +76,11 @@ export default function CTASection() {
               楽天従業員紹介 限定特典
             </span>
           </div>
-          <h2 className="text-3xl md:text-4xl font-black tracking-tight leading-snug mb-4">
-            これ、普通の紹介リンクより<br />お得です。
+          <h2
+            className="font-black leading-[0.95] tracking-[-0.03em] mb-4"
+            style={{ fontSize: "clamp(36px, 8vw, 64px)" }}
+          >
+            これ、普通の<br />紹介リンクより<br />お得です。
           </h2>
           <p className="text-white/40 text-sm leading-relaxed max-w-md mx-auto">
             楽天従業員からの紹介は通常の友達紹介とは別キャンペーン（コード：2162）。

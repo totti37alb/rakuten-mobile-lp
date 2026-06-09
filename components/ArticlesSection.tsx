@@ -14,15 +14,20 @@ export default function ArticlesSection({ articles }: { articles: ArticleMeta[] 
   if (articles.length === 0) return null;
 
   return (
-    <section className="py-24 px-5 bg-[#e8ebe6]">
+    <section className="py-24 px-5 bg-white">
       <div className="max-w-4xl mx-auto">
 
-        <div className="mb-14 text-center">
-          <span className="text-[#868685] text-[11px] font-semibold tracking-[0.15em] uppercase">Articles</span>
-          <h2 className="text-4xl md:text-5xl font-black tracking-tight text-[#0e0f0c] mt-3">
-            お役立ち情報
-          </h2>
-          <p className="text-[#868685] text-sm mt-2 font-medium">定期更新中</p>
+        <div className="mb-14">
+          <p className="text-[11px] font-semibold tracking-[0.18em] uppercase text-[#868685] mb-4">Articles</p>
+          <div className="flex items-end justify-between gap-4">
+            <h2
+              className="font-black text-[#0e0f0c] leading-[0.92] tracking-[-0.03em]"
+              style={{ fontSize: "clamp(40px, 9vw, 72px)" }}
+            >
+              お役立ち情報
+            </h2>
+            <p className="text-[#868685] text-xs font-medium pb-1 flex-shrink-0">定期更新中</p>
+          </div>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">

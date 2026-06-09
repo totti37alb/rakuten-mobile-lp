@@ -116,9 +116,12 @@ export default function FAQSection() {
     <section className="py-24 px-5 bg-[#e8ebe6]">
       <div className="max-w-2xl mx-auto">
 
-        <div className="mb-14 text-center">
-          <span className="text-[#868685] text-[11px] font-semibold tracking-[0.15em] uppercase">FAQ</span>
-          <h2 className="text-4xl md:text-5xl font-black tracking-tight text-[#0e0f0c] mt-3">
+        <div className="mb-14">
+          <p className="text-[11px] font-semibold tracking-[0.18em] uppercase text-[#868685] mb-4">FAQ</p>
+          <h2
+            className="font-black text-[#0e0f0c] leading-[0.92] tracking-[-0.03em]"
+            style={{ fontSize: "clamp(44px, 10vw, 80px)" }}
+          >
             よくある質問
           </h2>
         </div>

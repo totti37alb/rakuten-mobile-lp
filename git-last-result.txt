@@ -1,3 +1,3 @@
+e54ae28 fix: split FAQ answers into multiple paragraphs for readability
 6555adb content: rewrite all articles with conversational writing style
 f745de1 fix: add remark-gfm for markdown table support, rewrite coverage article
-d9eaf64 fix: add remark-gfm for markdown table support, rewrite coverage article
