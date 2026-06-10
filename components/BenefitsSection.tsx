@@ -2,8 +2,8 @@ const benefits = [
   {
     num: "01",
     label: "料金",
-    title: "月額最安 1,068円〜",
-    description: "3GBまで1,068円、無制限でも3,278円。データ使用量に応じた自動調整で無駄ゼロ。",
+    title: "月額最安 1,078円〜",
+    description: "3GBまで1,078円、無制限でも3,278円。データ使用量に応じた自動調整で無駄ゼロ。",
   },
   {
     num: "02",
@@ -39,57 +39,46 @@ const benefits = [
 
 export default function BenefitsSection() {
   return (
-    <section className="bg-[#e8ebe6] py-24 px-5">
+    <section className="py-20 px-4" style={{ backgroundColor: "#FAF7F2" }}>
       <div className="max-w-4xl mx-auto">
-
-        {/* ヘッダー */}
-        <div className="mb-16">
-          <p className="text-[11px] font-semibold tracking-[0.18em] uppercase text-[#868685] mb-4">
-            Why Rakuten Mobile
-          </p>
-          <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-3">
-            <h2
-              className="font-black text-[#0e0f0c] leading-[0.92] tracking-[-0.03em]"
-              style={{ fontSize: "clamp(44px, 10vw, 80px)" }}
-            >
-              私が選んだ<br />6つの理由
-            </h2>
-            <p className="text-[#868685] text-sm font-medium md:pb-2">by totti</p>
+        {/* セクションヘッダー */}
+        <div className="mb-12">
+          <div className="flex items-center gap-4 mb-4">
+            <div className="flex-1 h-px bg-[#E5DDD0]" />
+            <span className="text-[#C0A890] text-xs font-bold tracking-widest uppercase">
+              Why Rakuten Mobile
+            </span>
+            <div className="flex-1 h-px bg-[#E5DDD0]" />
           </div>
+          <h2 className="text-3xl md:text-4xl font-black tracking-tight text-gray-900 text-center">
+            私が選んだ6つの理由
+          </h2>
+          <p className="text-center text-[#C0A890] text-sm mt-2 font-medium">by totti</p>
         </div>
 
-        {/* カードグリッド */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-px bg-[#d0d4cf] border border-[#d0d4cf] rounded-2xl overflow-hidden">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
           {benefits.map((b) => (
             <div
-              key={b.num}
-              className="group bg-white p-7 hover:bg-[#fafafa] transition-colors duration-150 relative overflow-hidden"
+              key={b.title}
+              className="group relative bg-white border-2 rounded-2xl p-6 hover:border-rakuten-red/40 hover:shadow-lg transition-all duration-200"
+              style={{ borderColor: "#E5DDD0" }}
             >
-              {/* 大きい背景数字 */}
-              <span
-                className="absolute -right-2 -top-3 font-black text-[#e8ebe6] select-none pointer-events-none leading-none group-hover:text-[#e0e3de] transition-colors"
-                style={{ fontSize: "88px" }}
-                aria-hidden
-              >
-                {b.num}
-              </span>
-
-              {/* コンテンツ */}
-              <div className="relative z-10">
-                <span className="inline-block text-[10px] font-bold tracking-[0.12em] uppercase text-[#868685] bg-[#e8ebe6] px-2.5 py-1 rounded-full mb-4">
+              {/* 番号バッジ */}
+              <div className="flex items-start justify-between mb-4">
+                <span className="text-[#E5DDD0] font-black text-3xl leading-none group-hover:text-rakuten-red/20 transition-colors">
+                  {b.num}
+                </span>
+                <span className="text-[10px] font-bold tracking-widest uppercase bg-[#FAF7F2] border border-[#E5DDD0] text-[#C0A890] px-2 py-0.5 rounded-full">
                   {b.label}
                 </span>
-                <h3 className="font-bold text-[#0e0f0c] text-base leading-snug mb-2">
-                  {b.title}
-                </h3>
-                <p className="text-[#868685] text-sm leading-relaxed">
-                  {b.description}
-                </p>
               </div>
+              {/* タイトル */}
+              <h3 className="font-bold text-gray-900 text-base mb-2 leading-tight">{b.title}</h3>
+              {/* 説明 */}
+              <p className="text-gray-500 text-sm leading-relaxed">{b.description}</p>
             </div>
           ))}
         </div>
-
       </div>
     </section>
   );

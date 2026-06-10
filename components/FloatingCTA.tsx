@@ -22,19 +22,19 @@ export default function FloatingCTA() {
       }`}
     >
       <div
-        className="px-5 py-3 border-t border-white/[0.07]"
-        style={{ background: "rgba(14,15,12,0.92)", backdropFilter: "blur(16px)" }}
+        className="px-4 py-3 border-t border-white/10"
+        style={{ background: "rgba(17,17,17,0.95)", backdropFilter: "blur(12px)" }}
       >
         <div className="max-w-sm mx-auto flex items-center gap-3">
           <div className="flex-1 min-w-0">
-            <p className="text-white/35 text-[10px] truncate font-medium">楽天従業員紹介 限定キャンペーン</p>
-            <p className="text-white text-xs font-bold">MNP乗り換えで<span className="text-rakuten-red"> 14,000P </span>還元</p>
+            <p className="text-white/50 text-xs truncate">楽天従業員紹介 限定キャンペーン</p>
+            <p className="text-white text-xs font-bold">MNP乗り換えで<span className="text-rakuten-red">14,000P</span>還元</p>
           </div>
           <a
             href={REFERRAL_URL}
             target="_blank"
             rel="noopener noreferrer"
-            className="flex-shrink-0 bg-rakuten-red hover:bg-rakuten-crimson text-white font-bold text-sm px-5 py-2.5 rounded-xl transition-all duration-200"
+            className="flex-shrink-0 bg-rakuten-red hover:bg-rakuten-crimson text-white font-bold text-sm px-5 py-3 rounded-lg transition-colors duration-200"
           >
             申し込む →
           </a>

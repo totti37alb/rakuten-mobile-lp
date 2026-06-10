@@ -15,26 +15,27 @@ export default function MarqueeTicker({
   dark?: boolean;
 }) {
   const tickerItems = items ?? DEFAULT_ITEMS;
+  // Triple for seamless loop
   const all = [...tickerItems, ...tickerItems, ...tickerItems, ...tickerItems, ...tickerItems, ...tickerItems];
 
   return (
     <div
-      className={`overflow-hidden py-2.5 border-y ${
+      className={`overflow-hidden py-3 border-y ${
         dark
           ? "bg-rakuten-red border-rakuten-crimson"
-          : "bg-[#0e0f0c] border-white/[0.07]"
+          : "bg-[#1a1a1a] border-[#333]"
       }`}
     >
       <div className="flex items-center animate-marquee">
         {all.map((item, i) => (
           <span
             key={i}
-            className={`whitespace-nowrap text-[11px] font-semibold tracking-[0.12em] uppercase px-6 flex items-center gap-6 ${
-              dark ? "text-white/90" : "text-white/50"
+            className={`whitespace-nowrap font-bold text-xs tracking-widest uppercase px-5 flex items-center gap-5 ${
+              dark ? "text-white" : "text-white/80"
             }`}
           >
             {item}
-            <span className={`text-[8px] ${dark ? "text-white/40" : "text-white/20"}`}>◆</span>
+            <span className="opacity-30 text-[10px]">◆</span>
           </span>
         ))}
       </div>

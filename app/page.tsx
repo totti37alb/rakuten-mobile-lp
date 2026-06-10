@@ -40,7 +40,7 @@ export default function Home() {
       {/* フッター */}
       <footer
         className="text-center py-8 text-xs px-4 pb-24 md:pb-8 border-t"
-        style={{ backgroundColor: "#e8ebe6", color: "#868685", borderColor: "#d0d4cf" }}
+        style={{ backgroundColor: "#FAF7F2", color: "#C0A890", borderColor: "#E5DDD0" }}
       >
         <p>※ 本ページはtottiが楽天グループ社員として作成した個人の紹介ページです。</p>
         <p className="mt-1">

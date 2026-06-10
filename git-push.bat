@@ -1,6 +1,6 @@
 @echo off
 cd /d "%~dp0"
 git add -A
-git commit -m "design: overhaul PersonalIntro, Benefits, Articles, FAQ, CTA sections"
+git commit -m "feat: use totti.png as author avatar"
 git push origin main
 git log --oneline -3 > git-last-result.txt
