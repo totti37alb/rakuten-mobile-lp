@@ -1,26 +1,31 @@
 import type { Metadata } from "next";
 import "./globals.css";
 
-const REFERRAL_URL = "https://r10.to/hkhSbQ";
+const SITE_NAME = "楽天モバイル従業員紹介キャンペーン";
+const SITE_TITLE =
+  "楽天モバイル従業員紹介キャンペーン｜MNP乗り換えで14,000ポイント還元";
+const SITE_DESCRIPTION =
+  "楽天グループ社員tottiの従業員紹介リンクから楽天モバイルに申し込むと、MNPで14,000P・新規で11,000P還元。月額1,068円〜データ無制限プランの詳細と申し込み手順をまとめました。";
 
 export const metadata: Metadata = {
-  title: "楽天モバイル紹介キャンペーン｜友達紹介で最大14,000ポイント還元",
-  description:
-    "楽天モバイルを友達紹介リンクから申し込むと、紹介された方・紹介した方どちらもポイントがもらえます。月額最安0円〜、データ無制限プランの詳細と特典をまとめました。",
+  title: {
+    default: SITE_TITLE,
+    template: `%s｜${SITE_NAME}`,
+  },
+  description: SITE_DESCRIPTION,
   openGraph: {
-    title: "楽天モバイル紹介キャンペーン｜友達紹介で最大14,000ポイント還元",
-    description:
-      "紹介リンク経由で申し込むだけで特典ポイントをGET。競馬・サッカー観戦のお供に最適なデータ無制限プランをお得に始めよう。",
+    title: SITE_TITLE,
+    description: SITE_DESCRIPTION,
+    siteName: SITE_NAME,
     type: "website",
     locale: "ja_JP",
   },
   twitter: {
     card: "summary_large_image",
-    title: "楽天モバイル紹介キャンペーン｜友達紹介で最大14,000ポイント還元",
-    description:
-      "紹介リンク経由で申し込むだけで特典ポイントをGET。競馬・サッカー観戦にも最適なデータ無制限プランをお得に始めよう。",
+    title: SITE_TITLE,
+    description: SITE_DESCRIPTION,
   },
-  metadataBase: new URL("https://your-domain.vercel.app"), // ← デプロイ後に実際のURLに変更
+  metadataBase: new URL("https://rakuten-mobile-lp.vercel.app"),
 };
 
 export default function RootLayout({

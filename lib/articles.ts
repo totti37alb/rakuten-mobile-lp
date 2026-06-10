@@ -2,6 +2,7 @@ import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
 import { remark } from "remark";
+import remarkGfm from "remark-gfm";
 import html from "remark-html";
 
 const articlesDirectory = path.join(process.cwd(), "content/articles");
@@ -52,7 +53,10 @@ export async function getArticle(slug: string): Promise<Article | null> {
   const fileContents = fs.readFileSync(fullPath, "utf8");
   const { data, content } = matter(fileContents);
 
-  const processedContent = await remark().use(html).process(content);
+  const processedContent = await remark()
+    .use(remarkGfm)
+    .use(html, { allowDangerousHtml: true })
+    .process(content);
   const contentHtml = processedContent.toString();
 
   return {
@@ -61,6 +65,7 @@ export async function getArticle(slug: string): Promise<Article | null> {
     date: data.date ?? "",
     excerpt: data.excerpt ?? "",
     emoji: data.emoji ?? "📄",
+    thumbnail: data.thumbnail ?? null,
     contentHtml,
   };
 }
