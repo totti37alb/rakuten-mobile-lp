@@ -1,3 +1,3 @@
+d227482 design: overhaul PersonalIntro, Benefits, Articles, FAQ, CTA sections
+177a9e1 design: ヘッダーをtotti.ワードマークに刷新、赤Rバッジを全面置き換え（ロゴ規定#5対応も兼ねる）
 2ca0446 design: overhaul PersonalIntro, Benefits, Articles, FAQ, CTA sections
-0dac989 fix: metadataBaseを新ドメイン totti37alb.vercel.app に変更
-195ac61 fix: 自己紹介のクラブ名をプロフィール文脈のみ復元（訴求文は一般表現を維持）
