@@ -19,11 +19,9 @@ export default function HeroSection() {
 
       {/* ナビバー */}
       <div className="relative z-10 border-b border-white/10 px-6 py-4 flex items-center justify-between max-w-5xl mx-auto">
-        <div className="flex items-center gap-2">
-          <div className="w-7 h-7 bg-rakuten-red rounded-sm flex items-center justify-center">
-            <span className="text-white font-black text-xs">R</span>
-          </div>
-          <span className="font-bold text-sm tracking-wide">楽天モバイル 従業員紹介</span>
+        <div className="flex items-baseline gap-3">
+          <span className="font-black text-lg tracking-[-0.02em] text-white">totti<span className="text-rakuten-red">.</span></span>
+          <span className="hidden sm:inline text-white/40 text-[11px] tracking-[0.08em]">スマホ代、まじめに下げる係</span>
         </div>
         <a
           href={REFERRAL_URL}
@@ -41,9 +39,7 @@ export default function HeroSection() {
 
           {/* 差出人ラベル */}
           <div className="inline-flex items-center gap-2 mb-6 border border-white/20 rounded-full px-4 py-1.5 bg-white/5">
-            <span className="w-4 h-4 rounded-full bg-rakuten-red flex items-center justify-center">
-              <span className="text-white text-[8px] font-black">R</span>
-            </span>
+            <span className="w-1.5 h-1.5 rounded-full bg-rakuten-red" />
             <span className="text-white/60 text-xs font-bold tracking-widest uppercase">
               From totti · 楽天グループ社員
             </span>

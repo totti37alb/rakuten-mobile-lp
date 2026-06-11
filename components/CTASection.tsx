@@ -53,9 +53,7 @@ export default function CTASection() {
         {/* ヘッダー */}
         <div className="text-center mb-16">
           <div className="inline-flex items-center gap-2 border border-white/[0.12] rounded-full px-4 py-1.5 bg-white/[0.04] mb-6">
-            <span className="w-3.5 h-3.5 rounded-full bg-rakuten-red flex items-center justify-center">
-              <span className="text-white text-[7px] font-black">R</span>
-            </span>
+            <span className="text-white font-black text-xs">totti<span className="text-rakuten-red">.</span></span>
             <span className="text-white/50 text-[10px] font-semibold tracking-[0.12em] uppercase">
               楽天従業員紹介 限定特典
             </span>

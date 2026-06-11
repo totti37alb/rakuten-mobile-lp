@@ -1,3 +1,3 @@
-6510f14 auto: 記事追加 2026-06-11
-1e3705c content: 新記事を従業員紹介向けにリライト、全記事の文体調整、サムネ追加
-5386a09 fix: 記事別メタ追加、968円表記修正、開示文言追加、マーキー・ポイント内訳改善
+2ca0446 design: overhaul PersonalIntro, Benefits, Articles, FAQ, CTA sections
+0dac989 fix: metadataBaseを新ドメイン totti37alb.vercel.app に変更
+195ac61 fix: 自己紹介のクラブ名をプロフィール文脈のみ復元�

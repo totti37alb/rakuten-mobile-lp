@@ -7,11 +7,9 @@ export default function CampaignBannerSection() {
     <section className="bg-[#0e0f0c]">
       {/* ナビバー */}
       <div className="px-6 py-4 flex items-center justify-between max-w-5xl mx-auto border-b border-white/[0.07]">
-        <div className="flex items-center gap-2.5">
-          <div className="w-7 h-7 bg-rakuten-red rounded-md flex items-center justify-center">
-            <span className="text-white font-black text-xs">R</span>
-          </div>
-          <span className="text-white/90 font-semibold text-sm tracking-tight">楽天モバイル 従業員紹介</span>
+        <div className="flex items-baseline gap-3">
+          <span className="font-black text-lg tracking-[-0.02em] text-white">totti<span className="text-rakuten-red">.</span></span>
+          <span className="hidden sm:inline text-white/40 text-[11px] tracking-[0.08em]">スマホ代、まじめに下げる係</span>
         </div>
         <a
           href={REFERRAL_URL}

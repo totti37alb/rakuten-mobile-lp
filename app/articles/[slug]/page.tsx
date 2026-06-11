@@ -138,9 +138,7 @@ export default async function ArticlePage({
         {/* 記事内CTA */}
         <div className="mt-16 rounded-2xl p-8 text-center border border-[#d0d4cf]/60 bg-white shadow-sm">
           <div className="inline-flex items-center gap-2 border border-[#d0d4cf] rounded-full px-4 py-1.5 mb-5">
-            <div className="w-4 h-4 rounded-full bg-rakuten-red flex items-center justify-center">
-              <span className="text-white text-[8px] font-black">R</span>
-            </div>
+            <span className="font-black text-xs text-[#0e0f0c]">totti<span className="text-rakuten-red">.</span></span>
             <span className="text-[10px] font-semibold tracking-[0.12em] uppercase text-[#868685]">
               楽天従業員紹介 限定特典
             </span>
