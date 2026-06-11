@@ -55,7 +55,7 @@ export default function PersonalIntroSection() {
                 </svg>
                 @totti37alb
               </a>
-              <p className="text-[#868685] text-[11px] mt-1">サッカークラブのサポーター歴25年</p>
+              <p className="text-[#868685] text-[11px] mt-1">アルビレックス新潟サポ25年</p>
               <p className="text-[#868685] text-[11px]">週末は競馬AI開発</p>
             </div>
           </div>
@@ -74,13 +74,13 @@ export default function PersonalIntroSection() {
           {/* 左：本文 */}
           <div>
             <p className="text-[#454745] text-sm leading-[1.9] mb-4">
-              サッカークラブを25年応援している楽天グループの社員です。週末は競馬AIを作って遊んでいます。
+              アルビレックス新潟を25年応援している楽天グループの社員です。週末は競馬AIを作って遊んでいます。
             </p>
             <p className="text-[#454745] text-sm leading-[1.9]">
               好きなクラブを応援し続けるために、まず固定費を見直しました。スマホ代を月3,278円（税込）に抑えて、好きなことを長く続ける——自分にとってはその選択が楽天モバイルでした。
             </p>
             <div className="flex flex-wrap gap-2 mt-6">
-              {["固定費から始めた節約", "週末は競馬AI開発", "サッカー観戦25年"].map((tag) => (
+              {["固定費から始めた節約", "週末は競馬AI開発", "アルビサポ25年"].map((tag) => (
                 <span
                   key={tag}
                   className="text-[11px] font-medium px-3 py-1 rounded-full border border-[#e0e3de] text-[#868685] bg-[#e8ebe6]"
