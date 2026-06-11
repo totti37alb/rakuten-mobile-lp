@@ -1,23 +1,23 @@
 const REFERRAL_URL = "https://r10.to/hkhSbQ";
 
+const CAMPAIGN_URL =
+  "https://network.mobile.rakuten.co.jp/campaign/referral-application-employee/";
+
 const steps = [
   {
     num: "01",
-    title: "紹介リンクからログインして申し込む",
-    detail: "このページのリンクから楽天IDでログイン後、Rakuten最強プランに申し込む。申し込み前のログインが確実。申し込み後でも7日以内なら対象。",
-    note: "翌々月末日 23:59 までに完了",
+    title: "紹介リンクから楽天IDでログインして申し込む",
+    detail: "このページの紹介リンクから楽天IDでログインし、Rakuten最強プランに申し込みます。お申し込み前のログインが条件です。",
   },
   {
     num: "02",
     title: "Rakuten最強プランの利用を開始する",
-    detail: "SIM/eSIMの開通を完了させる。MNP乗り換えは番号移行完了日、新規は配送完了日または開通日（早い方）。",
-    note: "翌々月末日 23:59 までに完了",
+    detail: "SIM/eSIMの開通を完了させ、利用を開始します。",
   },
   {
     num: "03",
-    title: "Rakuten Linkアプリで10秒以上通話する",
-    detail: "アプリをダウンロードし、発信で10秒以上通話。0570などの他社接続サービスへの発信は対象外。「my楽天モバイル」の通話履歴で達成確認できる。",
-    note: "翌々月末日 23:59 までに完了",
+    title: "Rakuten Linkアプリを利用する",
+    detail: "アプリをダウンロードして発信通話します。達成期限など詳細条件は公式キャンペーンページをご確認ください。",
   },
 ];
 
@@ -25,29 +25,13 @@ const pointBreakdown = [
   {
     label: "MNP乗り換え",
     total: "14,000",
-    schedule: [
-      { month: "達成月の4ヶ月後", point: "4,000P" },
-      { month: "達成月の5ヶ月後", point: "5,000P" },
-      { month: "達成月の6ヶ月後", point: "5,000P" },
-    ],
     highlight: true,
   },
   {
     label: "新規申し込み",
     total: "11,000",
-    schedule: [
-      { month: "達成月の4ヶ月後", point: "3,000P" },
-      { month: "達成月の5ヶ月後", point: "4,000P" },
-      { month: "達成月の6ヶ月後", point: "4,000P" },
-    ],
     highlight: false,
   },
-];
-
-const diffs = [
-  "2回線目・再契約の方も対象（通常の友人紹介と異なる従業員紹介のメリット）",
-  "過去に楽天モバイルを使ったことがある方も対象",
-  "おひとり様最大5回線まで適用可能",
 ];
 
 export default function CTASection() {
@@ -80,11 +64,10 @@ export default function CTASection() {
             className="font-black leading-[0.95] tracking-[-0.03em] mb-4"
             style={{ fontSize: "clamp(36px, 8vw, 64px)" }}
           >
-            これ、普通の<br />紹介リンクより<br />お得です。
+            楽天社員からの、<br />従業員紹介です。
           </h2>
           <p className="text-white/40 text-sm leading-relaxed max-w-md mx-auto">
-            楽天従業員からの紹介は通常の友達紹介とは別キャンペーン（コード：2162）。
-            2回線目・再契約の方も対象になるなど、条件がより広い。
+            楽天従業員からの紹介は通常の友達紹介とは別キャンペーン（コード：2162）です。
           </p>
         </div>
 
@@ -100,24 +83,20 @@ export default function CTASection() {
               }`}
             >
               <p className="text-white/40 text-[11px] mb-1 font-medium">{p.label}</p>
-              <p className={`text-3xl font-black mb-4 ${p.highlight ? "text-rakuten-red" : "text-white"}`}>
+              <p className={`text-3xl font-black ${p.highlight ? "text-rakuten-red" : "text-white"}`}>
                 {p.total}
                 <span className="text-sm font-semibold text-white/40"> P</span>
               </p>
-              <div className="space-y-1.5 border-t border-white/[0.08] pt-3">
-                {p.schedule.map((s) => (
-                  <div key={s.month} className="flex justify-between items-center">
-                    <span className="text-white/30 text-[11px]">{s.month}</span>
-                    <span className={`text-xs font-bold ${p.highlight ? "text-rakuten-red" : "text-white/60"}`}>
-                      {s.point}
-                    </span>
-                  </div>
-                ))}
-              </div>
-              <p className="text-white/20 text-[10px] mt-3">※ 期間限定P・有効期限6ヶ月</p>
             </div>
           ))}
         </div>
+
+        {/* 必須注釈 */}
+        <p className="text-white/30 text-[11px] leading-relaxed text-center -mt-10 mb-14">
+          ※お申し込み前の紹介キャンペーンURLへのログインやサービス利用開始等条件あり。
+          <br />
+          ※ポイントは、紹介ログイン月の4カ月後から分割付与。
+        </p>
 
         {/* 3ステップ */}
         <div className="mb-14">
@@ -135,10 +114,6 @@ export default function CTASection() {
                     <div className="flex-1 min-w-0">
                       <p className="text-white font-semibold text-sm leading-snug mb-2">{step.title}</p>
                       <p className="text-white/40 text-xs leading-relaxed">{step.detail}</p>
-                      <div className="mt-3 inline-flex items-center gap-1.5 bg-white/[0.04] border border-white/[0.08] rounded-full px-3 py-1">
-                        <span className="w-1.5 h-1.5 rounded-full bg-rakuten-red/70 flex-shrink-0" />
-                        <span className="text-white/40 text-[10px] font-medium">{step.note}</span>
-                      </div>
                     </div>
                   </div>
                 </div>
@@ -152,19 +127,21 @@ export default function CTASection() {
           </div>
         </div>
 
-        {/* 従業員紹介の差別化 */}
-        <div className="bg-white/[0.04] border border-white/[0.08] rounded-2xl p-6 mb-12">
-          <p className="text-white/30 text-[10px] font-semibold uppercase tracking-[0.15em] mb-5 text-center">
-            通常の友達紹介にはない、従業員紹介だけのメリット
+        {/* 詳細条件への誘導 */}
+        <div className="bg-white/[0.04] border border-white/[0.08] rounded-2xl p-6 mb-12 text-center">
+          <p className="text-white/60 text-sm leading-relaxed">
+            対象条件・達成期限・ポイント付与などの詳細は、
+            <br className="hidden md:block" />
+            <a
+              href={CAMPAIGN_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="underline underline-offset-2 text-white/80 hover:text-rakuten-red transition-colors"
+            >
+              楽天モバイル公式キャンペーンページ（コード：2162）
+            </a>
+            でご確認ください。
           </p>
-          <div className="space-y-3">
-            {diffs.map((d, i) => (
-              <div key={i} className="flex items-start gap-3">
-                <span className="flex-shrink-0 text-rakuten-red text-sm mt-0.5">✓</span>
-                <p className="text-white/60 text-sm leading-relaxed">{d}</p>
-              </div>
-            ))}
-          </div>
         </div>
 
         {/* CTA */}

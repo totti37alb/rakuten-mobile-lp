@@ -27,8 +27,8 @@ export default function FloatingCTA() {
       >
         <div className="max-w-sm mx-auto flex items-center gap-3">
           <div className="flex-1 min-w-0">
-            <p className="text-white/35 text-[10px] truncate font-medium">楽天従業員紹介 限定キャンペーン</p>
-            <p className="text-white text-xs font-bold">MNP乗り換えで<span className="text-rakuten-red"> 14,000P </span>還元</p>
+            <p className="text-white/35 text-[10px] truncate font-medium">楽天従業員紹介キャンペーン</p>
+            <p className="text-white text-xs font-bold">MNP乗り換えで最大<span className="text-rakuten-red"> 14,000P </span>還元<span className="text-white/35 font-medium">※条件・分割付与あり</span></p>
           </div>
           <a
             href={REFERRAL_URL}

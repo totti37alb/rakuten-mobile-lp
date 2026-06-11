@@ -149,8 +149,13 @@ export default async function ArticlePage({
             紹介リンクから申し込むと<br />
             <span className="text-rakuten-red">最大 14,000P 還元</span>
           </p>
-          <p className="text-sm mb-6 text-[#868685]">
-            通常の友達紹介より最大1,000P多い、従業員限定特典です。
+          <p className="text-sm mb-3 text-[#868685]">
+            通常の友達紹介とは別の、従業員紹介キャンペーンです。
+          </p>
+          <p className="text-[11px] mb-6 text-[#868685]/80 leading-relaxed">
+            ※お申し込み前の紹介キャンペーンURLへのログインやサービス利用開始等条件あり。
+            <br />
+            ※ポイントは、紹介ログイン月の4カ月後から分割付与。
           </p>
           <a
             href={REFERRAL_URL}
@@ -164,7 +169,7 @@ export default async function ArticlePage({
             ※ 通常ページからの申し込みは特典対象外です
           </p>
           <p className="text-[11px] mt-2 text-[#868685]/80">
-            ※ 紹介リンク経由で申し込みが成立すると、紹介者（totti）にも楽天ポイントが付与されます
+            ※ 本ページは楽天グループ社員tottiによる従業員紹介ページです（#PR）
           </p>
         </div>
 

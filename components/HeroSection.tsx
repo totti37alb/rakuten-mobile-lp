@@ -61,7 +61,7 @@ export default function HeroSection() {
             <br className="hidden md:block" />
             <strong className="text-white">あなたへ最大14,000P</strong>が還元されます。
             <br className="hidden md:block" />
-            通常の友達紹介より最大1,000P多い、従業員限定の特典です。
+            通常の友達紹介とは別の、従業員紹介キャンペーンです。
           </p>
 
           {/* ポイント数字 */}
@@ -82,7 +82,13 @@ export default function HeroSection() {
               </p>
             </div>
           </div>
-          <p className="text-white/40 text-xs mb-8">※ 楽天従業員紹介限定（コード：2162）。2回線目・再契約の方も対象。</p>
+          <p className="text-white/40 text-xs mb-8 leading-relaxed">
+            ※お申し込み前の紹介キャンペーンURLへのログインやサービス利用開始等条件あり。
+            <br />
+            ※ポイントは、紹介ログイン月の4カ月後から分割付与。
+            <br />
+            ※楽天従業員紹介キャンペーン（コード：2162）。詳細条件は公式キャンペーンページをご確認ください。
+          </p>
 
           {/* CTA */}
           <a
