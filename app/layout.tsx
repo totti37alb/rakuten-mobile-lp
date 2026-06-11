@@ -25,7 +25,7 @@ export const metadata: Metadata = {
     title: SITE_TITLE,
     description: SITE_DESCRIPTION,
   },
-  metadataBase: new URL("https://rakuten-mobile-lp.vercel.app"),
+  metadataBase: new URL("https://totti37alb.vercel.app"),
 };
 
 export default function RootLayout({
