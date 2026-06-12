@@ -4,6 +4,7 @@ date: "2026-06-11"
 excerpt: "大手キャリアから乗り換えて浮いた月5,000円弱が、週末の競馬AI開発の原資に。固定費の見直しが趣味を支えている話。"
 emoji: "🐎"
 category: "競馬AI"
+thumbnail: "/articles/kaihatsu.png"
 ---
 
 趣味に毎月いくら使っているか、把握してますか。
