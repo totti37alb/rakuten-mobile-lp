@@ -8,6 +8,13 @@ export type ArticleMeta = {
   excerpt: string;
   emoji?: string;
   thumbnail?: string;
+  category?: string;
+};
+
+const CATEGORY_COLORS: Record<string, string> = {
+  楽天モバイル: "border-rakuten-red/30 text-rakuten-red",
+  競馬AI: "border-emerald-600/30 text-emerald-700",
+  アルビレックス: "border-orange-500/40 text-orange-600",
 };
 
 export default function ArticlesSection({ articles }: { articles: ArticleMeta[] }) {
@@ -56,7 +63,16 @@ export default function ArticlesSection({ articles }: { articles: ArticleMeta[] 
 
               {/* テキスト */}
               <div className="p-5">
-                <p className="text-[11px] text-[#868685] mb-1.5 font-medium">{article.date}</p>
+                <div className="flex items-center gap-2 mb-1.5">
+                  <span
+                    className={`text-[10px] font-semibold px-2 py-0.5 rounded-full border bg-white ${
+                      CATEGORY_COLORS[article.category ?? "楽天モバイル"] ?? "border-[#d0d4cf] text-[#868685]"
+                    }`}
+                  >
+                    {article.category ?? "楽天モバイル"}
+                  </span>
+                  <p className="text-[11px] text-[#868685] font-medium">{article.date}</p>
+                </div>
                 <h3 className="font-bold text-[#0e0f0c] text-sm leading-snug group-hover:text-rakuten-red transition-colors mb-2">
                   {article.title}
                 </h3>

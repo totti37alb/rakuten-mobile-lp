@@ -102,7 +102,7 @@ export default async function ArticlePage({
         <div className="mb-8">
           <div className="flex items-center gap-3 mb-5">
             <span className="text-[11px] font-semibold px-3 py-1 rounded-full border border-[#d0d4cf] text-[#868685] bg-white">
-              楽天モバイル
+              {article.category}
             </span>
             <time className="text-[11px] text-[#868685] font-medium">{article.date}</time>
           </div>

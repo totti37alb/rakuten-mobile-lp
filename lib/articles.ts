@@ -14,6 +14,7 @@ export type ArticleMeta = {
   excerpt: string;
   emoji?: string;
   thumbnail?: string;
+  category: string;
 };
 
 export type Article = ArticleMeta & {
@@ -39,6 +40,7 @@ export function getAllArticles(): ArticleMeta[] {
         excerpt: data.excerpt ?? "",
         emoji: data.emoji ?? "📄",
         thumbnail: data.thumbnail ?? null,
+        category: data.category ?? "楽天モバイル",
       } as ArticleMeta;
     });
 
@@ -66,6 +68,7 @@ export async function getArticle(slug: string): Promise<Article | null> {
     excerpt: data.excerpt ?? "",
     emoji: data.emoji ?? "📄",
     thumbnail: data.thumbnail ?? null,
+    category: data.category ?? "楽天モバイル",
     contentHtml,
   };
 }
