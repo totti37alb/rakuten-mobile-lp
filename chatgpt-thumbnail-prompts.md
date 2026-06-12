@@ -69,7 +69,41 @@ Aspect ratio: 16:9, high resolution
 
 ---
 
-### 4. 次回以降の自動生成記事向け汎用テンプレート
+### 4. 競馬AI予想記事（週次・重賞深掘り型）
+**記事タイトル例：**「【6月13日】函館スプリントS、AIと人気が真っ二つに割れた話」
+
+```
+A cinematic, editorial-style thumbnail image for a Japanese horse racing AI prediction article.
+Mood: analytical, thrilling, the tension between data and instinct
+Main subject: thoroughbred racehorses sprinting on a turf track in golden afternoon light, motion blur on the field
+Key visual element: a translucent layer of glowing data — scores, ranking bars, scatter points — floating over one side of the frame, as if an AI is watching the race; the contrast between raw sport and clean data
+Color palette: deep green turf, warm sunlight, dark navy shadows, emerald-green data glow accents
+Style: modern sports editorial photography mixed with subtle data visualization overlay, dramatic, NOT stock photo, NOT cartoon
+No text overlay needed.
+Aspect ratio: 16:9, high resolution
+```
+
+※ 競馬AIカテゴリの記事はアクセントを赤ではなくエメラルド系にする（サイトのカテゴリ色と合わせる）。
+
+---
+
+### 5. 競馬AI開発費×節約記事
+**記事タイトル：**「競馬AIの開発費、楽天モバイルの節約分から出てます」
+
+```
+A cinematic, editorial-style thumbnail image for a Japanese article about funding a hobby (horse racing AI development) through saving on phone bills.
+Mood: clever, cozy, weekend-hobby satisfaction
+Main subject: a desk at home on a weekend — a laptop showing horse racing data charts, a smartphone beside it, a cup of coffee, warm lamp light
+Key visual element: the laptop screen glowing with simple score tables and a small horse figurine or racing magazine nearby, hinting at horse racing without showing a track
+Color palette: warm cream and wood tones, soft emerald-green screen glow, one red accent object
+Style: modern Japanese lifestyle photography, magazine editorial, candid and real, NOT stock photo
+No text overlay needed.
+Aspect ratio: 16:9, high resolution
+```
+
+---
+
+### 6. 次回以降の自動生成記事向け汎用テンプレート
 
 記事のテーマに応じて `[  ]` を埋める：
 
