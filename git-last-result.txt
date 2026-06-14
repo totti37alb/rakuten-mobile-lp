@@ -1,3 +1,3 @@
+dc6c120 design: overhaul PersonalIntro, Benefits, Articles, FAQ, CTA sections
 5976f18 design: overhaul PersonalIntro, Benefits, Articles, FAQ, CTA sections
 1a79084 auto: 記事追加 2026-06-14
-b0f7e97 style: 6/13記事の段落を細かく分割、文体ルールに改行ルール追記
