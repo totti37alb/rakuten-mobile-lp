@@ -88,4 +88,50 @@ Aspect ratio: 16:9, high resolution
 ---
 
 ### 5. 競馬AI開発費×節約記事
-**記事タイトル：**�
+**記事タイトル：**「競馬AIの開発費、楽天モバイルの節約分から出てます」
+
+```
+A cinematic, editorial-style thumbnail image for a Japanese article about funding a hobby (horse racing AI development) through saving on phone bills.
+Mood: clever, cozy, weekend-hobby satisfaction
+Main subject: a desk at home on a weekend — a laptop showing horse racing data charts, a smartphone beside it, a cup of coffee, warm lamp light
+Key visual element: the laptop screen glowing with simple score tables and a small horse figurine or racing magazine nearby, hinting at horse racing without showing a track
+Color palette: warm cream and wood tones, soft emerald-green screen glow, one red accent object
+Style: modern Japanese lifestyle photography, magazine editorial, candid and real, NOT stock photo
+No text overlay needed.
+Aspect ratio: 16:9, high resolution
+```
+
+---
+
+### 6. 次回以降の自動生成記事向け汎用テンプレート
+
+記事のテーマに応じて `[  ]` を埋める：
+
+```
+A cinematic, editorial-style thumbnail image for a Japanese mobile carrier article about [記事テーマを一言で].
+Mood: [cheerful / exciting / trustworthy / clever / satisfying]
+Main subject: [具体的なシーン・人物・場所]
+Key visual element: [印象に残る視覚的要素]
+Color palette: warm cream or white background, bold red accent, clean and modern
+Style: modern Japanese lifestyle photography, magazine editorial, candid and real, NOT stock photo, NOT generic illustration
+No text overlay needed.
+Aspect ratio: 16:9, high resolution
+```
+
+---
+
+## 生成した画像の使い方
+
+1. 画像を `public/articles/` に保存（例：`data-saving-thumb.jpg`）
+2. 記事のfrontmatterに追記：
+   ```
+   thumbnail: "/articles/data-saving-thumb.jpg"
+   ```
+3. git add → commit → push
+
+---
+
+## ヒント
+- DALL-E 3は「NOT stock photo」を入れると劇的によくなる
+- 「cinematic」「editorial」がリアル感を出すキーワード
+- 顔のアップより「シーン・状況」を主役にすると汎用性が高い

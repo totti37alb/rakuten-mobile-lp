@@ -1,3 +1,3 @@
-7d478e0 design: overhaul PersonalIntro, Benefits, Articles, FAQ, CTA sections
-9151e4d assets: 競馬AI記事2本のサムネイル追加
-9a69f08 content: 6/13重賞AI予想記事（深掘り型）、日付指定
+1a79084 auto: 記事追加 2026-06-14
+b0f7e97 style: 6/13記事の段落を細かく分割、文体ルールに改行ルール追記
+3cd5cb6 content: 6/13予想記事に文体ルール適用（迷い・立場・脱線・感情を追加）
