@@ -1,0 +1,15 @@
+===HEAD-vs-ORIGIN=== 
+096fa15f593a8036c86fc73f699e9a140f4f878a
+096fa15f593a8036c86fc73f699e9a140f4f878a
+===THUMB-TRACKED=== 
+public/articles/my-rakuten-renewal-data-check-thumb.png
+===ARTICLE-TRACKED=== 
+content/articles/2026-06-17-my-rakuten-renewal-data-check.md
+===HEAD-FILES=== 
+096fa15 design: overhaul PersonalIntro, Benefits, Articles, FAQ, CTA sections
+ fix-push.bat                                          |  10 ++++++++++
+ git-last-result.txt                                   | Bin 234 -> 154 bytes
+ .../articles/my-rakuten-renewal-data-check-thumb.png  | Bin 0 -> 1785393 bytes
+ push2.bat                                             |  16 ++++++++++++++++
+ 4 files changed, 26 insertions(+)
+===END=== 
