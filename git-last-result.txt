@@ -1,3 +1,3 @@
+44abe02 design: overhaul PersonalIntro, Benefits, Articles, FAQ, CTA sections
 169b711 design: overhaul PersonalIntro, Benefits, Articles, FAQ, CTA sections
 c163af9 design: overhaul PersonalIntro, Benefits, Articles, FAQ, CTA sections
-1760285 design: overhaul PersonalIntro, Benefits, Articles, FAQ, CTA sections
