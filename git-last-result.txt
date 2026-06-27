@@ -1,3 +1,3 @@
+78bd255 design: overhaul PersonalIntro, Benefits, Articles, FAQ, CTA sections
 b7383aa design: overhaul PersonalIntro, Benefits, Articles, FAQ, CTA sections
-f7cd9cd auto: 記事追加 2026-06-25 eSIM即日開通
-aafcdd8 design: overhaul PersonalIntro, Benefits, Articles, FAQ, CTA sections
+f7cd9cd auto: 記事追加 2026-06-25 
