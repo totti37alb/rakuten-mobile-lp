@@ -1,3 +1,3 @@
+83707dc design: overhaul PersonalIntro, Benefits, Articles, FAQ, CTA sections
 652a745 auto: 記事追加 2026-06-27
 78bd255 design: overhaul PersonalIntro, Benefits, Articles, FAQ, CTA sections
-b7383aa design: overhaul PersonalIntro, Benefits, Articles, FAQ, CTA sections
