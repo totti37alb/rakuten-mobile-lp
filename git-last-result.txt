@@ -1,3 +1,3 @@
+dbf5a1e auto: 記事追加 2026-07-05
 970490a design: overhaul PersonalIntro, Benefits, Articles, FAQ, CTA sections
 508c4c4 auto: 記事追加 2026-07-04 iPhone17e 1円
-e6e1c28 design: overhaul PersonalIntro, Benefits, Articles, FA
