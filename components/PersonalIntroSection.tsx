@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Reveal from "@/components/motion/Reveal";
 
 const X_URL = "https://x.com/totti37alb";
 
@@ -10,6 +11,7 @@ export default function PersonalIntroSection() {
       <div className="max-w-4xl mx-auto px-5 pt-20 pb-0">
 
         {/* ラベル */}
+        <Reveal>
         <p className="text-[11px] font-semibold tracking-[0.18em] uppercase text-[#868685] mb-6">
           Who is totti?
         </p>
@@ -60,6 +62,7 @@ export default function PersonalIntroSection() {
             </div>
           </div>
         </div>
+        </Reveal>
       </div>
 
       {/* ── 区切り線 ── */}
@@ -72,7 +75,7 @@ export default function PersonalIntroSection() {
         <div className="grid md:grid-cols-2 gap-10 md:gap-16">
 
           {/* 左：本文 */}
-          <div>
+          <Reveal delay={0.05}>
             <p className="text-[#454745] text-sm leading-[1.9] mb-4">
               アルビレックス新潟を25年応援している楽天グループの社員です。週末は競馬AIを作って遊んでいます。
             </p>
@@ -89,10 +92,10 @@ export default function PersonalIntroSection() {
                 </span>
               ))}
             </div>
-          </div>
+          </Reveal>
 
           {/* 右：プルクォート */}
-          <div className="flex items-start">
+          <Reveal delay={0.15} className="flex items-start">
             <div className="border-l-2 border-[#CC0000] pl-6">
               <p className="text-[#0e0f0c] text-lg md:text-xl font-bold leading-[1.65] tracking-tight">
                 自分で使って納得したことだけを、このページに書いています。
@@ -101,7 +104,7 @@ export default function PersonalIntroSection() {
                 合う人・合わない人、どちらも正直に書きます。強制・勧誘するつもりは一切ありません。
               </p>
             </div>
-          </div>
+          </Reveal>
         </div>
       </div>
 

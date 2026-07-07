@@ -1,3 +1,5 @@
+import Reveal from "@/components/motion/Reveal";
+
 const benefits = [
   {
     num: "01",
@@ -43,26 +45,30 @@ export default function BenefitsSection() {
       <div className="max-w-4xl mx-auto">
 
         {/* ヘッダー */}
-        <div className="mb-16">
-          <p className="text-[11px] font-semibold tracking-[0.18em] uppercase text-[#868685] mb-4">
-            Why Rakuten Mobile
-          </p>
-          <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-3">
-            <h2
-              className="font-black text-[#0e0f0c] leading-[0.92] tracking-[-0.03em]"
-              style={{ fontSize: "clamp(44px, 10vw, 80px)" }}
-            >
-              私が選んだ<br />6つの理由
-            </h2>
-            <p className="text-[#868685] text-sm font-medium md:pb-2">by totti</p>
+        <Reveal>
+          <div className="mb-16">
+            <p className="text-[11px] font-semibold tracking-[0.18em] uppercase text-[#868685] mb-4">
+              Why Rakuten Mobile
+            </p>
+            <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-3">
+              <h2
+                className="font-black text-[#0e0f0c] leading-[0.92] tracking-[-0.03em]"
+                style={{ fontSize: "clamp(44px, 10vw, 80px)" }}
+              >
+                私が選んだ<br />6つの理由
+              </h2>
+              <p className="text-[#868685] text-sm font-medium md:pb-2">by totti</p>
+            </div>
           </div>
-        </div>
+        </Reveal>
 
         {/* カードグリッド */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-px bg-[#d0d4cf] border border-[#d0d4cf] rounded-2xl overflow-hidden">
-          {benefits.map((b) => (
-            <div
+          {benefits.map((b, i) => (
+            <Reveal
               key={b.num}
+              delay={(i % 2) * 0.08 + Math.floor(i / 2) * 0.05}
+              y={20}
               className="group bg-white p-7 hover:bg-[#fafafa] transition-colors duration-150 relative overflow-hidden"
             >
               {/* 大きい背景数字 */}
@@ -86,7 +92,7 @@ export default function BenefitsSection() {
                   {b.description}
                 </p>
               </div>
-            </div>
+            </Reveal>
           ))}
         </div>
 

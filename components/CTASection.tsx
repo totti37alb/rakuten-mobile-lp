@@ -1,3 +1,6 @@
+import Reveal from "@/components/motion/Reveal";
+import CountUp from "@/components/motion/CountUp";
+
 const REFERRAL_URL = "https://r10.to/hkhSbQ";
 
 const CAMPAIGN_URL =
@@ -24,12 +27,12 @@ const steps = [
 const pointBreakdown = [
   {
     label: "MNP乗り換え",
-    total: "14,000",
+    total: 14000,
     highlight: true,
   },
   {
     label: "新規申し込み",
-    total: "11,000",
+    total: 11000,
     highlight: false,
   },
 ];
@@ -51,6 +54,7 @@ export default function CTASection() {
       <div className="relative z-10 max-w-2xl mx-auto px-5 py-24">
 
         {/* ヘッダー */}
+        <Reveal>
         <div className="text-center mb-16">
           <div className="inline-flex items-center gap-2 border border-white/[0.12] rounded-full px-4 py-1.5 bg-white/[0.04] mb-6">
             <span className="text-white font-black text-xs">totti<span className="text-rakuten-red">.</span></span>
@@ -68,12 +72,14 @@ export default function CTASection() {
             楽天従業員からの紹介は通常の友達紹介とは別キャンペーン（コード：2162）です。
           </p>
         </div>
+        </Reveal>
 
         {/* ポイント比較カード */}
         <div className="grid grid-cols-2 gap-3 mb-14">
-          {pointBreakdown.map((p) => (
-            <div
+          {pointBreakdown.map((p, i) => (
+            <Reveal
               key={p.label}
+              delay={i * 0.1}
               className={`rounded-2xl p-5 border ${
                 p.highlight
                   ? "bg-rakuten-red/[0.12] border-rakuten-red/30"
@@ -82,10 +88,10 @@ export default function CTASection() {
             >
               <p className="text-white/40 text-[11px] mb-1 font-medium">{p.label}</p>
               <p className={`text-3xl font-black ${p.highlight ? "text-rakuten-red" : "text-white"}`}>
-                {p.total}
+                <CountUp value={p.total} />
                 <span className="text-sm font-semibold text-white/40"> P</span>
               </p>
-            </div>
+            </Reveal>
           ))}
         </div>
 
@@ -97,6 +103,7 @@ export default function CTASection() {
         </p>
 
         {/* 3ステップ */}
+        <Reveal>
         <div className="mb-14">
           <p className="text-white/30 text-[10px] font-semibold uppercase tracking-[0.15em] text-center mb-6">
             キャンペーン参加方法
@@ -124,6 +131,7 @@ export default function CTASection() {
             ))}
           </div>
         </div>
+        </Reveal>
 
         {/* 詳細条件への誘導 */}
         <div className="bg-white/[0.04] border border-white/[0.08] rounded-2xl p-6 mb-12 text-center">
@@ -143,6 +151,7 @@ export default function CTASection() {
         </div>
 
         {/* CTA */}
+        <Reveal>
         <div className="text-center">
           <a
             href={REFERRAL_URL}
@@ -163,6 +172,7 @@ export default function CTASection() {
             <p className="text-white/15 text-xs mt-2 font-bold">— totti</p>
           </div>
         </div>
+        </Reveal>
       </div>
     </section>
   );

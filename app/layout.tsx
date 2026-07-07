@@ -1,11 +1,12 @@
 import type { Metadata } from "next";
 import "./globals.css";
-
-const SITE_NAME = "楽天モバイル従業員紹介キャンペーン";
-const SITE_TITLE =
-  "楽天モバイル従業員紹介キャンペーン｜MNP乗り換えで14,000ポイント還元";
-const SITE_DESCRIPTION =
-  "楽天グループ社員tottiの従業員紹介リンクから楽天モバイルに申し込むと、MNPで最大14,000P・新規で最大11,000P還元（お申し込み前の紹介URLログインやサービス利用開始等条件あり。ポイントは紹介ログイン月の4カ月後から分割付与）。";
+import {
+  SITE_URL,
+  SITE_NAME,
+  SITE_TITLE,
+  SITE_DESCRIPTION,
+  AUTHOR,
+} from "@/lib/site";
 
 export const metadata: Metadata = {
   title: {
@@ -13,19 +14,53 @@ export const metadata: Metadata = {
     template: `%s｜${SITE_NAME}`,
   },
   description: SITE_DESCRIPTION,
+  keywords: [
+    "楽天モバイル",
+    "従業員紹介",
+    "従業員紹介キャンペーン",
+    "MNP",
+    "乗り換え",
+    "14000ポイント",
+    "紹介コード",
+    "Rakuten最強プラン",
+    "キャンペーンコード2162",
+  ],
+  authors: [{ name: AUTHOR.name, url: AUTHOR.x }],
+  creator: AUTHOR.name,
   openGraph: {
     title: SITE_TITLE,
     description: SITE_DESCRIPTION,
     siteName: SITE_NAME,
     type: "website",
     locale: "ja_JP",
+    url: SITE_URL,
+    images: [
+      {
+        url: "/campaign-banner.jpg",
+        width: 900,
+        height: 1200,
+        alt: "楽天モバイル 従業員紹介キャンペーン｜MNP乗り換えで14,000P / 新規11,000Pプレゼント",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
     title: SITE_TITLE,
     description: SITE_DESCRIPTION,
+    creator: "@totti37alb",
+    images: ["/campaign-banner.jpg"],
   },
-  metadataBase: new URL("https://totti37alb.vercel.app"),
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
+  metadataBase: new URL(SITE_URL),
 };
 
 export default function RootLayout({

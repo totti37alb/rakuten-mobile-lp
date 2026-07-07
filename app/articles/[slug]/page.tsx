@@ -4,6 +4,8 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
 import FloatingCTA from "@/components/FloatingCTA";
+import JsonLd from "@/components/JsonLd";
+import { SITE_URL, SITE_NAME, AUTHOR } from "@/lib/site";
 
 const REFERRAL_URL = "https://r10.to/hkhSbQ";
 
@@ -55,8 +57,57 @@ export default async function ArticlePage({
   const article = await getArticle(params.slug);
   if (!article) notFound();
 
+  const articleUrl = `${SITE_URL}/articles/${params.slug}`;
+
+  const articleJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "@id": `${articleUrl}#article`,
+    headline: article.title,
+    description: article.excerpt,
+    image: article.thumbnail ? [`${SITE_URL}${article.thumbnail}`] : undefined,
+    datePublished: article.date,
+    dateModified: article.date,
+    inLanguage: "ja",
+    mainEntityOfPage: articleUrl,
+    author: {
+      "@type": "Person",
+      "@id": AUTHOR.url,
+      name: AUTHOR.name,
+      jobTitle: AUTHOR.jobTitle,
+      url: SITE_URL,
+      sameAs: [AUTHOR.x],
+    },
+    publisher: {
+      "@type": "Person",
+      name: AUTHOR.name,
+      url: SITE_URL,
+    },
+  };
+
+  const breadcrumbJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      {
+        "@type": "ListItem",
+        position: 1,
+        name: SITE_NAME,
+        item: SITE_URL,
+      },
+      {
+        "@type": "ListItem",
+        position: 2,
+        name: article.title,
+        item: articleUrl,
+      },
+    ],
+  };
+
   return (
     <main className="min-h-screen pb-32 bg-[#e8ebe6]">
+      <JsonLd data={articleJsonLd} />
+      <JsonLd data={breadcrumbJsonLd} />
 
       {/* ヘッダー */}
       <header className="sticky top-0 z-40 border-b bg-[#e8ebe6]/90 border-[#d0d4cf]" style={{ backdropFilter: "blur(12px)" }}>
