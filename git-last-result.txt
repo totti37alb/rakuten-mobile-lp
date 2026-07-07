@@ -1,3 +1,3 @@
+e87455f auto: 記事追加 2026-07-07 地下鉄電波対策完了
 3e33e89 design: overhaul PersonalIntro, Benefits, Articles, FAQ, CTA sections
 c206b04 auto: 記事追加 2026-07-06
-a4e2db8 design: overhaul PersonalIntro, Benefits, Articles, FAQ, CTA sections
