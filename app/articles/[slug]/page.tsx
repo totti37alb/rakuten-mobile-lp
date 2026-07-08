@@ -204,36 +204,4 @@ export default async function ArticlePage({
           <p className="text-[11px] mb-6 text-[#868685]/80 leading-relaxed">
             ※お申し込み前の紹介キャンペーンURLへのログインやサービス利用開始等条件あり。
             <br />
-            ※ポイントは、紹介ログイン月の4カ月後から分割付与。
-          </p>
-          <a
-            href={REFERRAL_URL}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 bg-rakuten-red hover:bg-rakuten-crimson text-white font-bold text-base px-8 py-4 rounded-2xl transition-all duration-200 hover:-translate-y-0.5 shadow-lg shadow-rakuten-red/20 w-full justify-center max-w-xs"
-          >
-            紹介リンクから申し込む →
-          </a>
-          <p className="text-xs mt-3 text-[#868685]">
-            ※ 通常ページからの申し込みは特典対象外です
-          </p>
-          <p className="text-[11px] mt-2 text-[#868685]/80">
-            ※ 本ページは楽天グループ社員tottiによる従業員紹介ページです（#PR）
-          </p>
-        </div>
-
-        {/* フッターリンク */}
-        <div className="mt-10 text-center">
-          <Link
-            href="/"
-            className="text-sm text-[#868685] underline underline-offset-2 hover:text-[#0e0f0c] transition-colors"
-          >
-            ← トップページに戻る
-          </Link>
-        </div>
-      </div>
-
-      <FloatingCTA />
-    </main>
-  );
-}
+  
