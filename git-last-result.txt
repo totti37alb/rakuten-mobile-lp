@@ -1,3 +1,3 @@
+df9b2ea design: overhaul PersonalIntro, Benefits, Articles, FAQ, CTA sections
+a6c2f64 auto: 記事追加 2026-07-08（敬老キャンペーン）
 e4b4d46 design: overhaul PersonalIntro, Benefits, Articles, FAQ, CTA sections
-1e3c220 design: overhaul PersonalIntro, Benefits, Articles, FAQ, CTA sections
-61e1611 design: overhaul PersonalIntro, Benefits, Articles, FAQ, CTA sections
