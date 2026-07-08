@@ -79,4 +79,13 @@ export default function ArticlesSection({ articles }: { articles: ArticleMeta[] 
                 <h3 className="font-bold text-[#0e0f0c] text-sm leading-snug group-hover:text-rakuten-red transition-colors mb-2">
                   {article.title}
                 </h3>
-                <p className="te
+                <p className="text-xs text-[#868685] leading-relaxed line-clamp-2">{article.excerpt}</p>
+              </div>
+            </Link>
+            </Reveal>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}

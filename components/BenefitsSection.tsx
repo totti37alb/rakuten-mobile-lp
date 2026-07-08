@@ -88,4 +88,15 @@ export default function BenefitsSection() {
                 <h3 className="font-bold text-[#0e0f0c] text-base leading-snug mb-2">
                   {b.title}
                 </h3>
-                <p classNam
+                <p className="text-[#868685] text-sm leading-relaxed">
+                  {b.description}
+                </p>
+              </div>
+            </Reveal>
+          ))}
+        </div>
+
+      </div>
+    </section>
+  );
+}

@@ -101,4 +101,13 @@ export default function PersonalIntroSection() {
                 自分で使って納得したことだけを、このページに書いています。
               </p>
               <p className="text-[#868685] text-sm leading-relaxed mt-4">
-                合う人・合わない人、どちらも正直に書きます。強制・勧誘するつもりは一切あり
+                合う人・合わない人、どちらも正直に書きます。強制・勧誘するつもりは一切ありません。
+              </p>
+            </div>
+          </Reveal>
+        </div>
+      </div>
+
+    </section>
+  );
+}

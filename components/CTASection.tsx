@@ -166,4 +166,14 @@ export default function CTASection() {
           </p>
           <div className="mt-12 pt-8 border-t border-white/[0.08]">
             <p className="text-white/25 text-xs leading-relaxed">
-              少しでも固定費を抑えて、好きなことにお金を使ってほし�
+              少しでも固定費を抑えて、好きなことにお金を使ってほしい。<br />
+              そのきっかけになれたら嬉しいです。
+            </p>
+            <p className="text-white/15 text-xs mt-2 font-bold">— totti</p>
+          </div>
+        </div>
+        </Reveal>
+      </div>
+    </section>
+  );
+}
