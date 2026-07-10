@@ -9,3 +9,22 @@ M  git-last-result.txt
 A  public/articles/rakuten-wifi-spot-free-thumb.png
 A  push-fix.bat
 === add === 
+warning: in the working copy of 'auto-push-0710.bat', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'auto-push-out-0710.txt', LF will be replaced by CRLF the next time Git touches it
+=== commit === 
+[main dc04a6b] auto: kiji tsuika 2026-07-10
+ 7 files changed, 85 insertions(+), 3 deletions(-)
+ create mode 100644 auto-push-0710.bat
+ create mode 100644 auto-push-out-0710.txt
+ create mode 100644 auto-push-out.txt
+ create mode 100644 content/articles/2026-07-10-pa-league-nba-free.md
+ create mode 100644 public/articles/rakuten-wifi-spot-free-thumb.png
+ create mode 100644 push-fix.bat
+=== push === 
+To https://github.com/totti37alb/rakuten-mobile-lp.git
+   edba13a..dc04a6b  main -> main
+=== log === 
+dc04a6b auto: kiji tsuika 2026-07-10
+edba13a auto: 記事追加 2026-07-09
+8b6ede8 fix: OneDrive同期で破損したファイルを全て修復
+DONE 
