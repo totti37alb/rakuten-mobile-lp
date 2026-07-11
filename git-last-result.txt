@@ -1,3 +1,3 @@
+ecc963c auto: kiji tsuika 2026-07-11 saikyo-kanshasai
 95c6415 design: overhaul PersonalIntro, Benefits, Articles, FAQ, CTA sections
 dc04a6b auto: kiji tsuika 2026-07-10
-edba13a auto: 記事追加 2026-07-09
