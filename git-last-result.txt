@@ -1,3 +1,3 @@
+35a3305 add: kiji tsuika 2026-07-11 keiba-carryover-ai
 5d76628 add: kiji tsuika 2026-07-11 keiba-carryover-ai
 7df18ed auto: kiji tsuika 2026-07-11 saikyo-kanshasai
-ecc963c auto: kiji tsuika 2026-07-11 saikyo-kanshasai
